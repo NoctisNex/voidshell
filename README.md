@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  Personal website.<br>
+  Robin Schmid's personal website.<br>
   Linux, systems &amp; practical IT.
 </p>
 
@@ -18,28 +18,12 @@
 
 ---
 
-voidshell is where I share my work and what I'm learning about infrastructure, cloud and automation. It currently includes my background and coursework from the TBZ cloud-native course, covering cloud solutions and container services.
+voidshell is my personal brand and website. It's where I share my work and what I'm learning about infrastructure, cloud and automation. It currently includes my background and coursework from the TBZ cloud-native course, covering cloud solutions and container services.
 
 The site is built with Astro, plain CSS and Markdown. Astro generates static HTML at build time; the browser receives no client-side JavaScript. Layout, typography and the original monochrome identity do the visual work, with light and dark themes following the visitor's system preference.
 
-## Run locally
+## Ownership
 
-Requires Node.js 22.12 or newer and npm.
+Copyright (c) 2026 Robin Schmid. All rights reserved.
 
-```sh
-npm ci
-npm run dev
-```
-
-`npm run build` generates the site in `dist/`. Use `npm run preview` to check that build locally. The output can be served by any static host.
-
-## Working on the site
-
-| Content | Location |
-| --- | --- |
-| Site details and contact links | [`src/data/site.js`](src/data/site.js) |
-| Project write-ups | [`src/content/projects/`](src/content/projects/) |
-| Pages | [`src/pages/`](src/pages/) |
-| Styles | [`src/styles/global.css`](src/styles/global.css) |
-
-The [setup guide](SETUP.md) covers adding projects, replacing images and deploying the site. Logo usage is documented in [BRAND.txt](BRAND.txt).
+The voidshell name, logos and visual identity belong to my personal brand. This repository is public for reference. Reuse of my branding, site design, content or code requires my written permission, subject to the exceptions in [LICENSE](LICENSE).
