@@ -13,7 +13,6 @@
 
 <p align="center">
   <a href="https://voidshell.ch">voidshell.ch</a> &nbsp; / &nbsp;
-  <a href="SETUP.md">Setup &amp; maintenance</a>
 </p>
 
 ---
