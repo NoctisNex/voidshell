@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  Robin Schmid's personal website.<br>
+  Personal website.<br>
   Linux, systems &amp; practical IT.
 </p>
 
