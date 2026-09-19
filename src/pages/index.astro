@@ -1,0 +1,49 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProjectRow from '../components/ProjectRow.astro';
+import { site, localUrl } from '../data/site';
+import { getProjects } from '../data/projects';
+const projects = await getProjects();
+const profiles = site.profiles.filter(profile => profile.url);
+---
+<Layout>
+  <section class="hero container" aria-labelledby="intro-title">
+    <div class="hero-copy">
+      <p class="eyebrow">Robin / ICT-Fachmann EFZ</p>
+      <h1 id="intro-title">Linux.<br />Systems.<br /><span>Practical IT.</span></h1>
+      <p class="hero-introduction">{site.introduction}</p>
+      <a class="text-link" href="#work">Explore the work <span aria-hidden="true">↓</span></a>
+    </div>
+    <figure class="hero-portrait">
+      <img src={localUrl('/assets/images/robin-800.webp')} srcset={`${localUrl('/assets/images/robin-400.webp')} 400w, ${localUrl('/assets/images/robin-800.webp')} 800w, ${localUrl('/assets/images/robin-1200.webp')} 1200w`} sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1100px) 40vw, 432px" width="800" height="800" alt="Robin, wearing a black T-shirt." fetchpriority="high" />
+      <figcaption><span>The person behind voidshell</span><span>01</span></figcaption>
+    </figure>
+    <div class="hero-footnote"><span>Linux. Systems. Practical IT.</span><span class="meta">An ongoing collection</span></div>
+  </section>
+
+  <section class="work-section container" id="work" aria-labelledby="work-title">
+    <div class="section-heading">
+      <p class="eyebrow">01 / work</p>
+      <div><h2 id="work-title">Selected work.</h2>
+        <p class="section-note">Coursework from the Cloud-native, DevOps and Container course at TBZ, completed in 2026.</p>
+        {projects.some(project => project.data.example) && <p class="section-note">The entries below are examples. Real project write-ups will go here.</p>}
+      </div>
+    </div>
+    {projects.length ? <ol class="project-list">{projects.map((project, index) => <ProjectRow project={project} index={index} />)}</ol> : <p class="empty-work">Project write-ups are on their way.</p>}
+  </section>
+
+  <section class="about-strip" aria-labelledby="about-title">
+    <div class="container about-grid">
+      <p class="eyebrow">02 / about</p>
+      <div><h2 id="about-title">There's a person<br />behind the systems.</h2><p>I started out wanting to write software. Working in IT drew me towards the infrastructure underneath it. I like figuring out how the pieces fit, and what to check when they don't.</p><a class="text-link" href={localUrl('/about/')}>A little more about me <span aria-hidden="true">↗</span></a></div>
+    </div>
+  </section>
+
+  <section class="contact-section container" id="contact" aria-labelledby="contact-title">
+    <p class="eyebrow">03 / contact</p>
+    <div class="contact-content"><h2 id="contact-title">Let's talk.</h2>
+      {site.email ? <a class="contact-email" href={`mailto:${site.email}`}>{site.email} <span aria-hidden="true">↗</span></a> : <p class="contact-empty">Contact details will be added here.</p>}
+      {profiles.length > 0 && <ul class="social-links">{profiles.map(profile => <li><a href={profile.url}>{profile.label} <span aria-hidden="true">↗</span></a></li>)}</ul>}
+    </div>
+  </section>
+</Layout>

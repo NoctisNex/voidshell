@@ -1,0 +1,39 @@
+---
+import { render } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import { getProjects } from '../../data/projects';
+import { localUrl } from '../../data/site';
+export async function getStaticPaths() {
+  return (await getProjects()).map(project => ({ params: { slug: project.data.slug || project.id }, props: { project } }));
+}
+const { project } = Astro.props;
+const { data } = project;
+const { Content } = await render(project);
+---
+<Layout title={data.title} description={data.description} noindex={data.example}>
+  <article class="container">
+    <header class="page-heading project-heading">
+      <a class="back-link" href={localUrl('/#work')}>← All work</a>
+      <div class="project-label meta">{data.category && <span>{data.category}</span>}{data.example && <span>Example project</span>}</div>
+      <h1>{data.title}</h1>
+      <p class="page-introduction">{data.description}</p>
+      {(data.year || data.status || data.technologies.length > 0) && <dl class="project-meta">
+        {data.year && <div><dt>Year</dt><dd>{data.year}</dd></div>}
+        {data.status && <div><dt>Status</dt><dd>{data.status}</dd></div>}
+        {data.technologies.length > 0 && <div><dt>Technologies</dt><dd>{data.technologies.join(' / ')}</dd></div>}
+      </dl>}
+    </header>
+    {data.cover && <img class="project-cover" src={localUrl(data.cover.src)} alt={data.cover.alt} loading="lazy" decoding="async" />}
+    <div class="project-body">
+      <aside class="project-aside" aria-label="Project information">
+        {data.example && <p>This is a sample write-up to show the format. It does not describe completed work.</p>}
+        {data.repository && <a href={data.repository}>Source repository ↗</a>}
+        {data.live && <a href={data.live}>Live project ↗</a>}
+      </aside>
+      <div>
+        <div class="prose"><Content /></div>
+        {data.images.length > 0 && <div class="project-gallery">{data.images.map(image => <figure><img src={localUrl(image.src)} alt={image.alt} loading="lazy" decoding="async" />{image.caption && <figcaption>{image.caption}</figcaption>}</figure>)}</div>}
+      </div>
+    </div>
+  </article>
+</Layout>

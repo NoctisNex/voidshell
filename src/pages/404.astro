@@ -1,0 +1,7 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { localUrl } from '../data/site';
+---
+<Layout title="Page not found" description="This page could not be found on voidshell." noindex>
+  <section class="not-found container"><p class="eyebrow">404 / page not found</p><h1>Nothing here.</h1><p>The page may have moved, or the address may be wrong.</p><a class="text-link" href={localUrl('/')}>Back to voidshell <span aria-hidden="true">↗</span></a></section>
+</Layout>

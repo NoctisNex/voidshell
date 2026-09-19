@@ -1,0 +1,13 @@
+---
+import { site, localUrl } from '../data/site';
+---
+<footer class="site-footer container">
+  <div class="footer-identity">
+    <span class="footer-symbol" aria-hidden="true">
+      <img class="logo-light" src={localUrl('/assets/brand/symbol-tiny-black.svg')} width="32" height="32" alt="" />
+      <img class="logo-dark" src={localUrl('/assets/brand/symbol-tiny-white.svg')} width="32" height="32" alt="" />
+    </span>
+    <span>© {new Date().getFullYear()} {site.name}</span>
+  </div>
+  <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
+</footer>
