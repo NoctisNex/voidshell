@@ -1,8 +1,64 @@
+# Dependencies and generated output
 node_modules/
 dist/
 .astro/
-.sites-runtime/
+.cache/
+coverage/
+playwright-report/
+test-results/
+*.tsbuildinfo
+*.log
+
+# Local environment and credentials (keep the sanitized example shareable)
 .env
 .env.*
 !.env.example
+.dev.vars
+.dev.vars.*
+.npmrc
+*.key
+*.pem
+*.p12
+*.pfx
+.ssh/
+.aws/
+
+# Local preview, deployment and agent state
+.sites-runtime/
+.openai/
+.codex/
+.agents/
+.claude/
+.netlify/
+.vercel/
+.wrangler/
+
+# Original brand package: retain locally; publish only the site's chosen assets
+/voidshell-brand-package.zip
+/voidshell-brand-package/
+/voidshell/
+/README.txt
+/source/
+/vector/
+/raster/
+/icons/
+/social/
+/voidshell-presentation.pdf
+/voidshell-presentation.png
+/voidshell-presentation.svg
+
+# Keep original photos, CVs and other private material in these local folders
+/originals/
+/private/
+
+# Editor and operating-system files
+.idea/
+.vscode/
+*.code-workspace
+*.swp
+*.swo
+*~
 .DS_Store
+._*
+Thumbs.db
+Desktop.ini
