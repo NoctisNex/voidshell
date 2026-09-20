@@ -19,6 +19,6 @@ const path = hasTranslation ? englishPath(Astro.url.pathname) : '/';
   <div class="language-switch" role="group" aria-label={t.languageLabel}>
     {(['en', 'de'] as const).map(locale => locale === language
       ? <span lang={locale} aria-current="true" aria-label={locale === 'en' ? 'English' : 'Deutsch'}>{locale.toUpperCase()}</span>
-      : <a href={pageUrl(path, locale)} lang={locale} hreflang={locale === 'de' ? 'de-CH' : 'en'} aria-label={locale === 'en' ? 'Switch to English' : 'Auf Deutsch wechseln'}>{locale.toUpperCase()}</a>)}
+      : <a data-language={locale} href={pageUrl(path, locale)} lang={locale} hreflang={locale === 'de' ? 'de-CH' : 'en'} aria-label={locale === 'en' ? 'Switch to English' : 'Auf Deutsch wechseln'}>{locale.toUpperCase()}</a>)}
   </div>
 </header>
