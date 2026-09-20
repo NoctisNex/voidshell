@@ -8,7 +8,7 @@ export const site = {
   base: '/',
   title: 'Robin Schmid · Linux, systems & practical IT',
   description: 'Robin Schmid, ICT-Fachmann EFZ. Infrastructure, Linux, cloud and automation, with coursework in cloud solutions and Docker.',
-  introduction: "I'm Robin, an ICT-Fachmann EFZ focused on infrastructure, cloud and automation. I like understanding how systems fit together.",
+  introduction: "I'm Robin Schmid, an ICT-Fachmann EFZ with experience in IT support and PowerShell automation. I'm building on that foundation in systems engineering, Linux and cloud infrastructure.",
   email: 'robin.schmid@ik.me',
   profiles: [
     { label: 'GitHub', url: 'https://github.com/NoctisNex' },
