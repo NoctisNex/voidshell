@@ -8,6 +8,7 @@ year: "2026"
 status: "Kurs abgeschlossen"
 technologies: ["AWS EC2", "VPC", "S3", "cloud-init", "ALB", "CloudWatch"]
 repository: "https://gitlab.com/NoctisNex/cloud-native-bootcamp/-/tree/main/M346?ref_type=heads"
+outcomes: ["VPC mit öffentlichen und privaten Subnetzen in zwei Availability Zones aufgebaut.", "Automatische Skalierung unter Last von zwei auf vier Instanzen und anschliessend zurück auf zwei nachgewiesen."]
 order: 1
 ---
 
