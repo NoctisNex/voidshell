@@ -12,5 +12,11 @@ const t = copy(Astro.props.language);
     </span>
     <span>© {new Date().getFullYear()} {site.name}</span>
   </div>
+  <label class="theme-control" hidden>
+    <span>{t.theme}</span>
+    <select id="theme-select" name="theme">
+      {['system', 'light', 'dark'].map((value, index) => <option value={value}>{t.themeOptions[index]}</option>)}
+    </select>
+  </label>
   <a href="#top">{t.backTop} <span aria-hidden="true">↑</span></a>
 </footer>
