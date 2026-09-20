@@ -12,6 +12,7 @@ const projects = defineCollection({
     language: z.enum(['en', 'de']).default('en'),
     title: z.string(),
     description: z.string(),
+    outcomes: z.array(z.string()).default([]),
     slug: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/).optional(),
     order: z.number().default(100),
     year: z.string().optional(),
