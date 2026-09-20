@@ -1,48 +1,87 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { localUrl } from '../data/site';
+import ExperienceOverview from './ExperienceOverview.astro';
+import { site, localUrl } from '../data/site';
 import { copy, pageUrl, type Language } from '../data/i18n';
 interface Props { language?: Language }
 const { language = 'en' } = Astro.props;
 const t = copy(language);
 ---
 <Layout language={language} title={t.aboutTitle} description={t.aboutDescription}>
-  <div class="page-heading container">
-    <p class="eyebrow">{t.aboutEyebrow}</p>
-    <h1>{t.aboutHeading[0]}<br />{t.aboutHeading[1]}</h1>
-    <p class="page-introduction">{t.aboutIntroduction}</p>
-  </div>
-  <div class="about-page container">
-    <figure class="about-photo">
-      <img src={localUrl('/assets/images/robin-800.webp')} srcset={`${localUrl('/assets/images/robin-400.webp')} 400w, ${localUrl('/assets/images/robin-800.webp')} 800w, ${localUrl('/assets/images/robin-1200.webp')} 1200w`} sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1300px) 42vw, 540px" width="800" height="800" alt={t.aboutPortraitAlt} fetchpriority="high" />
-      <figcaption>Robin / voidshell</figcaption>
-    </figure>
-    <div class="about-text">
-      <section aria-labelledby="systems-title">
-        <h2 id="systems-title">{t.aboutHeadings[0]}</h2>
-        <p>{t.aboutParagraphs[0]}</p>
-        <p>{t.aboutParagraphs[1]}</p>
-        <p>{t.aboutParagraphs[2]}</p>
-      </section>
-      <section aria-labelledby="troubleshooting-title">
-        <h2 id="troubleshooting-title">{t.aboutHeadings[1]}</h2>
-        <p>{t.aboutParagraphs[3]}</p>
-        <p>{t.aboutParagraphs[4]}</p>
-      </section>
-      <section aria-labelledby="learning-title">
-        <h2 id="learning-title">{t.aboutHeadings[2]}</h2>
-        <p>{t.aboutParagraphs[5]}</p>
-        <p>{t.aboutParagraphs[6]}</p>
-      </section>
-      <section aria-labelledby="elsewhere-title">
-        <h2 id="elsewhere-title">{t.aboutHeadings[3]}</h2>
-        <p>{t.aboutParagraphs[7]}</p>
-      </section>
-      <section aria-labelledby="currently-title">
-        <h2 id="currently-title">{t.aboutHeadings[4]}</h2>
-        <p>{t.currentFocus || t.noUpdate}</p>
-      </section>
+  <div class="about-intro container">
+    <div>
+      <p class="eyebrow">{t.aboutEyebrow}</p>
+      <h1>{site.name}</h1>
+      <p class="qualification">ICT-Fachmann EFZ</p>
+      <p class="introduction">{t.aboutIntroduction}</p>
       <a class="text-link" href={pageUrl('/#contact', language)}>{t.getInTouch} <span aria-hidden="true">↗</span></a>
     </div>
+    <img class="portrait" src={localUrl('/assets/images/robin-800.webp')} srcset={`${localUrl('/assets/images/robin-400.webp')} 400w, ${localUrl('/assets/images/robin-800.webp')} 800w`} sizes="(max-width: 700px) 200px, 320px" width="800" height="800" alt={t.aboutPortraitAlt} fetchpriority="high" />
   </div>
+
+  <section class="career container" aria-labelledby="career-title">
+    <div class="section-heading">
+      <p class="eyebrow">{t.careerLabel}</p>
+      <h2 id="career-title">{t.workExperience}</h2>
+    </div>
+    <ol class="career-list">
+      {t.career.map(job => <li class="career-entry">
+        <p class="dates">{job.dates}</p>
+        <div>
+          <h3>{job.company}</h3>
+          <p class="role">{job.role}</p>
+          <p class="job-summary">{job.summary}</p>
+          {job.points.length > 0 && <ul>{job.points.map(point => <li>{point}</li>)}</ul>}
+        </div>
+      </li>)}
+    </ol>
+  </section>
+
+  <ExperienceOverview language={language} />
+
+  <section class="personal container" aria-label={t.personalLabel}>
+    <div><h2>{t.approachTitle}</h2><p>{t.approachText}</p></div>
+    <div><h2>{t.outsideTitle}</h2><p>{t.outsideText}</p></div>
+  </section>
+  <section class="next-update container" aria-labelledby="next-title">
+    <h2 id="next-title">{t.nextTitle}</h2>
+    <p>{t.currentFocus || t.noUpdate}</p>
+  </section>
 </Layout>
+
+<style>
+  .about-intro { display: grid; grid-template-columns: minmax(0, 1fr) 320px; align-items: center; gap: clamp(40px, 7vw, 100px); padding-block: 72px 80px; }
+  h1 { margin-top: 24px; font-size: clamp(3rem, 6vw, 5.5rem); line-height: 1.08; letter-spacing: -.05em; }
+  .qualification { margin-top: 14px; font-size: 1.125rem; }
+  .introduction { max-width: 550px; margin-top: 24px; color: var(--muted); font-size: 1.125rem; }
+  .about-intro .text-link { margin-top: 20px; }
+  .portrait { width: 320px; aspect-ratio: 1; object-fit: cover; }
+  .career { padding-bottom: 72px; }
+  .career .section-heading { margin-bottom: 28px; }
+  .career-list { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--line); }
+  .career-entry { display: grid; grid-template-columns: 1fr 3fr; gap: 32px; padding-block: 30px; border-bottom: 1px solid var(--line); }
+  .dates { font-size: .875rem; color: var(--muted); padding-top: 4px; }
+  .career-entry h3 { font-size: 1.375rem; line-height: 1.4; }
+  .role { margin-top: 4px; font-size: .9375rem; color: var(--muted); }
+  .job-summary { margin-top: 16px; max-width: 700px; }
+  .career-entry ul { margin: 12px 0 0; padding-left: 20px; max-width: 700px; color: var(--muted); }
+  .career-entry li + li { margin-top: 8px; }
+  .personal { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 7vw, 100px); padding-block: 56px; border-top: 1px solid var(--line); }
+  .personal h2 { font-size: 1.5rem; letter-spacing: -.025em; }
+  .personal p { margin-top: 18px; max-width: 520px; color: var(--muted); }
+  .next-update { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 28px; padding-block: 24px 56px; }
+  .next-update h2 { font-size: 1rem; letter-spacing: 0; line-height: 1.5; }
+  .next-update p { font-size: .9375rem; color: var(--muted); }
+  @media (max-width: 900px) {
+    .about-intro { grid-template-columns: minmax(0, 1fr) 240px; gap: 32px; }
+    .portrait { width: 240px; }
+  }
+  @media (max-width: 700px) {
+    .about-intro { grid-template-columns: 1fr; padding-block: 44px 56px; gap: 28px; }
+    .portrait { width: 200px; }
+    .career { padding-bottom: 48px; }
+    .career-entry { grid-template-columns: 1fr; gap: 10px; padding-block: 24px; }
+    .personal { grid-template-columns: 1fr; gap: 36px; padding-block: 40px; }
+    .next-update { padding-bottom: 40px; }
+  }
+</style>
