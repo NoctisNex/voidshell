@@ -131,8 +131,10 @@ const translations = {
         "company": "Spital Zollikerberg",
         "role": "ICT-Fachmann EFZ apprenticeship",
         "dates": "Aug 2023 to Aug 2026",
-        "summary": "First- and second-level support, with tasks in systems engineering.",
+        "summary": "First- and second-level support for staff across hospital wards and departments, onsite, remotely and by phone.",
         "points": [
+          "Handled TOPdesk tickets and calls from the call centre, resolving issues and escalating tickets when needed.",
+          "Troubleshot printer, hardware, software and basic network issues, with tasks involving Active Directory, DNS and DHCP.",
           "Automated Active Directory onboarding and offboarding with my own PowerShell scripts.",
           "Set up and managed more than 100 PCs and notebooks with SCCM, plus mobile devices with Workspace ONE."
         ]
@@ -274,8 +276,10 @@ const translations = {
         "company": "Spital Zollikerberg",
         "role": "Lehre als ICT-Fachmann EFZ",
         "dates": "Aug. 2023 bis Aug. 2026",
-        "summary": "1st- und 2nd-Level-Support sowie Aufgaben in der Systemtechnik.",
+        "summary": "1st- und 2nd-Level-Support für Mitarbeitende aller Stationen und Abteilungen, direkt vor Ort im Spital, per Fernzugriff und am Telefon.",
         "points": [
+          "Tickets in TOPdesk bearbeitet und Anrufe aus dem Callcenter entgegengenommen, Probleme gelöst und Tickets bei Bedarf eskaliert.",
+          "Drucker-, Hardware- und Softwareprobleme sowie einfache Netzwerkstörungen behoben und Aufgaben rund um Active Directory, DNS und DHCP übernommen.",
           "On- und Offboarding im Active Directory mit eigenen PowerShell-Skripten automatisiert.",
           "Über 100 PCs und Notebooks mit SCCM aufgesetzt und verwaltet, Mobilgeräte mit Workspace ONE."
         ]
