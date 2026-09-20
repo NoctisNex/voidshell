@@ -8,6 +8,7 @@ year: "2026"
 status: "Kurs abgeschlossen"
 technologies: ["Docker", "Compose", "Swarm", "Prometheus", "Grafana", "Trivy"]
 repository: "https://gitlab.com/NoctisNex/cloud-native-bootcamp/-/tree/main/M169?ref_type=heads"
+outcomes: ["Swarm-Cluster mit fünf Nodes betrieben und die Wiederherstellung nach Container-Löschung und Worker-Ausfall geprüft.", "Monitoring-Alarme unter Last ausgelöst und die Meldungen beim Auslösen und nach Ende der Last dokumentiert."]
 order: 2
 ---
 
