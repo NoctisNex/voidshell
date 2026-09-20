@@ -1,0 +1,10 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { copy, pageUrl, type Language } from '../data/i18n';
+interface Props { language?: Language }
+const { language = 'en' } = Astro.props;
+const t = copy(language);
+---
+<Layout language={language} title={t.notFoundTitle} description={t.notFoundDescription} noindex>
+  <section class="not-found container"><p class="eyebrow">{t.notFoundLabel}</p><h1>{t.notFoundHeading}</h1><p>{t.notFoundText}</p><a class="text-link" href={pageUrl('/', language)}>{t.backHome} <span aria-hidden="true">↗</span></a></section>
+</Layout>

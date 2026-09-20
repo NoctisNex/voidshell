@@ -1,15 +1,16 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import { localUrl } from '../data/site';
-interface Props { project: CollectionEntry<'projects'>; index: number }
-const { project, index } = Astro.props;
+import { copy, pageUrl, type Language } from '../data/i18n';
+interface Props { project: CollectionEntry<'projects'>; index: number; language?: Language }
+const { project, index, language = 'en' } = Astro.props;
+const t = copy(language);
 const { data } = project;
 ---
 <li class="project-row">
-  <a href={localUrl(`/work/${data.slug || project.id}/`)}>
+  <a href={pageUrl(`/work/${data.slug || project.id}/`, language)}>
     <span class="project-number meta" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
     <div class="project-copy">
-      <div class="project-label meta">{data.category && <span>{data.category}</span>}{data.example && <span>Example project</span>}</div>
+      <div class="project-label meta">{data.category && <span>{data.category}</span>}{data.example && <span>{t.example}</span>}</div>
       <h3>{data.title}</h3>
       <p>{data.description}</p>
       {data.technologies.length > 0 && <p class="project-technologies">{data.technologies.join(' / ')}</p>}

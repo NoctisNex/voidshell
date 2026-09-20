@@ -1,5 +1,8 @@
 ---
 import { site, localUrl } from '../data/site';
+import { copy, type Language } from '../data/i18n';
+interface Props { language?: Language }
+const t = copy(Astro.props.language);
 ---
 <footer class="site-footer container">
   <div class="footer-identity">
@@ -9,5 +12,5 @@ import { site, localUrl } from '../data/site';
     </span>
     <span>© {new Date().getFullYear()} {site.name}</span>
   </div>
-  <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
+  <a href="#top">{t.backTop} <span aria-hidden="true">↑</span></a>
 </footer>

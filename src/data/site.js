@@ -18,6 +18,8 @@ export const site = {
   // Add a sentence here to update the About page's "What's next" section.
   // An empty value keeps the section with a neutral "No update" message.
   currentFocus: '',
+  // German version of the same update.
+  currentFocusDe: '',
   navigation: [
     { label: 'work', href: '/#work' },
     { label: 'about', href: '/about/' },

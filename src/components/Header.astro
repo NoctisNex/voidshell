@@ -1,14 +1,24 @@
 ---
 import { site, localUrl } from '../data/site';
+import { copy, pageUrl, englishPath, type Language } from '../data/i18n';
+interface Props { language?: Language; hasTranslation?: boolean }
+const { language = 'en', hasTranslation = true } = Astro.props;
+const t = copy(language);
+const path = hasTranslation ? englishPath(Astro.url.pathname) : '/';
 ---
 <header class="site-header container">
-  <a class="brand" href={localUrl('/')} aria-label="voidshell home">
+  <a class="brand" href={pageUrl('/', language)} aria-label={t.homeLabel}>
     <img class="logo-light logo-horizontal" src={localUrl('/assets/brand/voidshell-horizontal-black.svg')} width="291" height="90" alt="voidshell" />
     <img class="logo-dark logo-horizontal" src={localUrl('/assets/brand/voidshell-horizontal-white.svg')} width="291" height="90" alt="voidshell" />
     <img class="logo-light logo-small" src={localUrl('/assets/brand/symbol-tiny-black.svg')} width="44" height="44" alt="voidshell" />
     <img class="logo-dark logo-small" src={localUrl('/assets/brand/symbol-tiny-white.svg')} width="44" height="44" alt="voidshell" />
   </a>
-  <nav aria-label="Main navigation">
-    {site.navigation.map(link => <a href={localUrl(link.href)} aria-current={link.href === '/about/' && Astro.url.pathname.endsWith('/about/') ? 'page' : undefined}>{link.label}</a>)}
+  <nav class="main-navigation" aria-label={t.navigation}>
+    {site.navigation.map((link, index) => <a href={pageUrl(link.href, language)} aria-current={link.href === '/about/' && Astro.url.pathname.endsWith('/about/') ? 'page' : undefined}>{t.nav[index]}</a>)}
   </nav>
+  <div class="language-switch" role="group" aria-label={t.languageLabel}>
+    {(['en', 'de'] as const).map(locale => locale === language
+      ? <span lang={locale} aria-current="true" aria-label={locale === 'en' ? 'English' : 'Deutsch'}>{locale.toUpperCase()}</span>
+      : <a href={pageUrl(path, locale)} lang={locale} hreflang={locale === 'de' ? 'de-CH' : 'en'} aria-label={locale === 'en' ? 'Switch to English' : 'Auf Deutsch wechseln'}>{locale.toUpperCase()}</a>)}
+  </div>
 </header>

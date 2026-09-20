@@ -3,14 +3,19 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { site, localUrl, absoluteUrl } from '../data/site';
 import '../styles/global.css';
-interface Props { title?: string; description?: string; noindex?: boolean }
-const { title = site.title, description = site.description, noindex = false } = Astro.props;
+import { copy, pageUrl, englishPath, type Language } from '../data/i18n';
+interface Props { title?: string; description?: string; noindex?: boolean; language?: Language; hasTranslation?: boolean }
+const { language = 'en', hasTranslation = true, noindex = false } = Astro.props;
+const t = copy(language);
+const { title = t.title, description = t.description } = Astro.props;
+const path = englishPath(Astro.url.pathname);
+const alternateUrl = (locale: Language) => Astro.site ? new URL(pageUrl(path, locale), Astro.site).href : undefined;
 const fullTitle = `${title} | ${site.brand}`;
 const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).href : undefined;
 const socialImage = absoluteUrl('/assets/images/social.png');
 ---
 <!doctype html>
-<html lang="en">
+<html lang={language === 'de' ? 'de-CH' : 'en'}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -21,16 +26,22 @@ const socialImage = absoluteUrl('/assets/images/social.png');
     <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
     {(noindex || !site.allowIndexing || !site.url) && <meta name="robots" content="noindex, follow" />}
     {canonical && <link rel="canonical" href={canonical} />}
+    {canonical && hasTranslation && !noindex && <>
+      <link rel="alternate" hreflang="en" href={alternateUrl('en')} />
+      <link rel="alternate" hreflang="de-CH" href={alternateUrl('de')} />
+      <link rel="alternate" hreflang="x-default" href={alternateUrl('en')} />
+    </>}
+    <meta property="og:locale" content={language === 'de' ? 'de_CH' : 'en_US'} />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={site.brand} />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     {canonical && <meta property="og:url" content={canonical} />}
-    {socialImage && <><meta property="og:image" content={socialImage} /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" /><meta property="og:image:alt" content="voidshell. Robin. Linux, systems and practical IT." /></>}
+    {socialImage && <><meta property="og:image" content={socialImage} /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" /><meta property="og:image:alt" content={t.socialAlt} /></>}
     <meta name="twitter:card" content={socialImage ? 'summary_large_image' : 'summary'} />
     <meta name="twitter:title" content={fullTitle} />
     <meta name="twitter:description" content={description} />
-    {socialImage && <><meta name="twitter:image" content={socialImage} /><meta name="twitter:image:alt" content="voidshell. Robin. Linux, systems and practical IT." /></>}
+    {socialImage && <><meta name="twitter:image" content={socialImage} /><meta name="twitter:image:alt" content={t.socialAlt} /></>}
     <link rel="icon" href={localUrl('/favicon.ico')} sizes="16x16 32x32 48x48" />
     <link rel="icon" href={localUrl('/assets/brand/symbol-micro-black.svg')} type="image/svg+xml" media="(prefers-color-scheme: light)" />
     <link rel="icon" href={localUrl('/assets/brand/symbol-micro-white.svg')} type="image/svg+xml" media="(prefers-color-scheme: dark)" />
@@ -38,9 +49,9 @@ const socialImage = absoluteUrl('/assets/images/social.png');
     <link rel="manifest" href={localUrl('/assets/brand/app/site.webmanifest')} />
   </head>
   <body id="top">
-    <a class="skip-link" href="#main">Skip to content</a>
-    <Header />
+    <a class="skip-link" href="#main">{t.skip}</a>
+    <Header language={language} hasTranslation={hasTranslation} />
     <main id="main" tabindex="-1"><slot /></main>
-    <Footer />
+    <Footer language={language} />
   </body>
 </html>
