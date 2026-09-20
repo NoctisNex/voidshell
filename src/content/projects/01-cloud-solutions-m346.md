@@ -1,32 +1,36 @@
 ---
-title: "Designing cloud solutions"
+title: "AWS infrastructure and automatic scaling"
 slug: "cloud-solutions-m346"
-description: "Module 346 coursework on choosing cloud services, planning costs and designing a solution around its requirements."
+description: "AWS lab work with cloud-init, public and private networks, load balancing and a tested scale-out from two to four instances."
 category: "Coursework / M346"
 year: "2026"
 status: "Completed course"
+technologies: ["AWS EC2", "VPC", "S3", "cloud-init", "ALB", "CloudWatch"]
 repository: "https://gitlab.com/NoctisNex/cloud-native-bootcamp/-/tree/main/M346?ref_type=heads"
+outcomes: ["Built a VPC with public and private subnets across two Availability Zones.", "Verified automatic scaling from two to four instances under load and back to two afterwards."]
 order: 1
 ---
 
-## The course
+## The work
 
-I took module 346, "Cloud Lösungen konzipieren und realisieren", as part of the Cloud-native, DevOps and Container course at Technische Berufsschule Zürich (TBZ), from March to July 2026.
+In module 346 at TBZ, I built and tested infrastructure in the AWS Learner Lab. The exercises progressed from individual servers to a web tier with load balancing and automatic scaling across two Availability Zones. I documented the configuration, commands, test results and troubleshooting in GitLab.
 
-The module connects technical design with the reasons for choosing a cloud solution: what it needs to do, what it costs and how it fits into an existing environment.
+I also compared on-premises, AWS and Azure options for a fictional company with 50 employees. That was a cost-planning exercise with stated assumptions, rather than a real customer migration. [Cost comparison (KN01)](https://gitlab.com/NoctisNex/cloud-native-bootcamp/-/blob/main/M346/KN01/README.md).
 
-## Choosing an approach
+## Provisioning and networking
 
-The course covers comparing on-premises and cloud options against an organisation's needs. That includes service models such as IaaS, PaaS and SaaS, along with the differences between virtual machines, containers and serverless services.
+I used cloud-init to configure Ubuntu instances, install packages and set up SSH access. I separated an Apache/PHP webserver and a MariaDB database onto two instances, then verified their connection over the private network with a PHP test page and Adminer. The cloud-init configurations are included in the repository. [Server provisioning (KN03)](https://gitlab.com/NoctisNex/cloud-native-bootcamp/-/blob/main/M346/KN03/README.md).
 
-Cost planning includes ongoing operation, not just the initial setup. Migration approaches and the division of security responsibilities between the customer and provider are also part of the module.
+For the network lab, I created a VPC with two public and two private subnets across two Availability Zones, separate route tables and an Internet Gateway. I configured security groups and tested HTTP and SSH access to the public instance, then connectivity from that instance to the private one. [VPC and connectivity tests (KN05)](https://gitlab.com/NoctisNex/cloud-native-bootcamp/-/blob/main/M346/KN05/README.md).
 
-## From requirements to a design
+Other exercises covered static website hosting and objects in S3, plus attaching and formatting an EBS volume on Windows Server.
 
-The technical scope includes selecting services for compute and data storage, planning cloud networking and considering availability, backups and recovery. The module then moves into installing and configuring the selected services, with a test concept covering functionality, performance and security.
+## Testing automatic scaling
 
-## My coursework
+I put webservers behind an Application Load Balancer and connected an Auto Scaling Group with a minimum of two and a maximum of four instances. A target-tracking policy used the number of requests per target.
 
-My module work is collected in the [M346 folder on GitLab](https://gitlab.com/NoctisNex/cloud-native-bootcamp/-/tree/main/M346?ref_type=heads). It is part of my [cloud-native bootcamp repository](https://gitlab.com/NoctisNex/cloud-native-bootcamp).
+I ran a Bash load test against the load balancer and observed CloudWatch alarms and the scaling activity. The group expanded from two to four instances, then returned to two after the load stopped. The write-up includes the alarms and instance activity for both directions. [Load balancing and scaling test (KN06)](https://gitlab.com/NoctisNex/cloud-native-bootcamp/-/blob/main/M346/KN06/README.md).
 
-This page summarises the module's scope. The repository contains the individual exercises and their documentation.
+## A troubleshooting example
+
+An RDP connection failed after a lab restart. I checked the changed public IP, then traced the remaining failure to filtering on the local Wi-Fi network. Switching to a mobile hotspot restored the connection. That exercise is a useful example of checking the whole connection path before changing the server. [RDP troubleshooting (KN04)](https://gitlab.com/NoctisNex/cloud-native-bootcamp/-/blob/main/M346/KN04/README.md).
