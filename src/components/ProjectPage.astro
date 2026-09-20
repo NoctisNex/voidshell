@@ -12,7 +12,7 @@ const t = copy(language);
 const otherProjects = await getProjects(language === 'en' ? 'de' : 'en');
 const hasTranslation = otherProjects.some(other => (other.data.slug || other.id) === (project.data.slug || project.id));
 const { data } = project;
-const { Content } = await render(project);
+const { Content, headings } = await render(project);
 ---
 <Layout language={language} hasTranslation={hasTranslation} title={data.title} description={data.description} noindex={data.example}>
   <article class="container">
@@ -21,6 +21,10 @@ const { Content } = await render(project);
       <div class="project-label meta">{data.category && <span>{data.category}</span>}{data.example && <span>{t.example}</span>}</div>
       <h1>{data.title}</h1>
       <p class="page-introduction">{data.description}</p>
+      {data.outcomes.length > 0 && <section class="project-results" aria-labelledby="results-title">
+        <h2 id="results-title">{t.results}</h2>
+        <ul>{data.outcomes.map(outcome => <li>{outcome}</li>)}</ul>
+      </section>}
       {(data.year || data.status || data.technologies.length > 0) && <dl class="project-meta">
         {data.year && <div><dt>{t.year}</dt><dd>{data.year}</dd></div>}
         {data.status && <div><dt>{t.status}</dt><dd>{data.status}</dd></div>}
@@ -33,6 +37,10 @@ const { Content } = await render(project);
         {data.example && <p>{t.exampleNotice}</p>}
         {data.repository && <a href={data.repository}>{t.repository} ↗</a>}
         {data.live && <a href={data.live}>{t.live} ↗</a>}
+        {headings.some(heading => heading.depth === 2) && <nav class="project-contents" aria-label={t.onPage}>
+          <p>{t.onPage}</p>
+          <ul>{headings.filter(heading => heading.depth === 2).map(heading => <li><a href={`#${heading.slug}`}>{heading.text}</a></li>)}</ul>
+        </nav>}
       </aside>
       <div>
         <div class="prose"><Content /></div>
