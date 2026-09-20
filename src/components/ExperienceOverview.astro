@@ -1,0 +1,53 @@
+---
+import { copy, pageUrl, type Language } from '../data/i18n';
+interface Props { language?: Language }
+const { language = 'en' } = Astro.props;
+const t = copy(language);
+---
+<section class="skills container" id="experience" aria-labelledby="experience-title">
+  <header class="skills-heading">
+    <p class="eyebrow">{t.experienceLabel}</p>
+    <h2 id="experience-title">{t.experienceTitle}</h2>
+  </header>
+  <div class="skills-list">
+    {t.experienceGroups.map(group => <div class="skill-group">
+      <h3>{group.title}</h3>
+      <div>
+        <ul>{group.items.flatMap(item => item.split(' / ')).map(item => <li>{item}</li>)}</ul>
+        {group.id === 'course' && <p class="course-note">{t.courseContext} <a href={pageUrl('/#work', language)}>{t.courseLink}</a></p>}
+        {group.id === 'projects' && <div class="project-note">
+          <p>{t.personalProjectsContext}</p>
+          <div class="project-links">
+            <a href="https://github.com/NoctisNex/Discord-Bot">Discord-Bot</a>
+            <a href="https://github.com/NoctisNex/Robin-Domain">Robin-Domain</a>
+          </div>
+        </div>}
+      </div>
+    </div>)}
+  </div>
+</section>
+<style>
+  .skills { display: grid; grid-template-columns: 1fr 3fr; gap: 32px; padding-bottom: 64px; }
+  .skills-heading { padding-top: 22px; }
+  h2 { max-width: 260px; margin-top: 20px; font-size: clamp(2rem, 3vw, 2.625rem); line-height: 1.15; }
+  .skill-group { display: grid; grid-template-columns: 155px minmax(0, 1fr); gap: 28px; padding-block: 24px; border-top: 1px solid var(--line); }
+  .skill-group:last-child { border-bottom: 1px solid var(--line); }
+  h3 { padding-top: 2px; color: var(--muted); font-size: .875rem; line-height: 1.6; font-weight: 400; }
+  ul { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px 20px; list-style: none; padding: 0; margin: 0; }
+  li { font-size: 1rem; overflow-wrap: anywhere; }
+  .course-note, .project-note { max-width: 540px; margin-top: 18px; color: var(--muted); font-size: .875rem; line-height: 1.6; }
+  .course-note a { display: block; width: fit-content; margin-top: 4px; padding-block: 8px; color: var(--foreground); }
+  .project-links { display: flex; flex-wrap: wrap; gap: 8px 24px; margin-top: 4px; }
+  .project-links a { padding-block: 8px; color: var(--foreground); }
+  @media (max-width: 1000px) {
+    .skills { grid-template-columns: 1fr 2fr; gap: 32px; }
+    .skill-group { grid-template-columns: 1fr; gap: 14px; }
+  }
+  @media (max-width: 700px) {
+    .skills { grid-template-columns: 1fr; gap: 28px; padding-bottom: 40px; }
+    .skills-heading { padding-top: 0; }
+    h2 { max-width: none; margin-top: 14px; }
+    ul { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 16px; }
+    .skill-group { padding-block: 22px; }
+  }
+</style>
