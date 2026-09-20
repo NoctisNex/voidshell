@@ -1,0 +1,55 @@
+---
+import { localUrl } from '../data/site';
+const home = localUrl('/');
+const germanHome = localUrl('/de/');
+---
+<script is:inline define:vars={{ home, germanHome }}>
+  (() => {
+    const root = document.documentElement;
+    const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
+    const read = key => { try { return localStorage.getItem(key); } catch { return null; } };
+    const save = (key, value) => { try { localStorage.setItem(key, value); } catch { /* Preferences remain usable without storage. */ } };
+    const validTheme = value => ['light', 'dark'].includes(value) ? value : 'system';
+    let theme = validTheme(read('voidshell.theme'));
+
+    const applyTheme = () => {
+      if (theme === 'system') delete root.dataset.theme;
+      else root.dataset.theme = theme;
+      const dark = theme === 'dark' || (theme === 'system' && systemTheme.matches);
+      document.querySelectorAll('meta[name="theme-color"]').forEach(meta => {
+        meta.content = dark ? '#000000' : '#ffffff';
+      });
+    };
+    // Apply before the first paint to avoid flashing the wrong theme.
+    applyTheme();
+    systemTheme.addEventListener('change', applyTheme);
+
+    // Honour explicit deep links. Only the default homepage restores a saved language.
+    if ((location.pathname === home || location.pathname === home.replace(/\/$/, '')) && read('voidshell.language') === 'de') {
+      location.replace(germanHome + location.search + location.hash);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const select = document.querySelector('#theme-select');
+      if (select) {
+        select.value = theme;
+        select.closest('.theme-control').hidden = false;
+        select.addEventListener('change', () => {
+          theme = validTheme(select.value);
+          save('voidshell.theme', theme);
+          applyTheme();
+        });
+      }
+      document.querySelectorAll('[data-language]').forEach(link => {
+        link.addEventListener('click', () => save('voidshell.language', link.dataset.language));
+      });
+      // Back/forward navigation can restore a page without running its scripts again.
+      window.addEventListener('pageshow', event => {
+        if (!event.persisted) return;
+        theme = validTheme(read('voidshell.theme'));
+        if (select) select.value = theme;
+        applyTheme();
+      });
+    });
+  })();
+</script>
