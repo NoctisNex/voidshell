@@ -37,7 +37,8 @@ const t = copy(language).linux;
       <ul class="course-list">
         {linuxCourses.map(course => <li>
           <span class:list={['course-status', { 'is-completed': course.status === 'completed' }]}>{t[course.status]}</span>
-          <p lang="en">{course.title}</p>
+          <p class="course-title" lang="en"><a href={course.url}>{course.title}</a></p>
+          <p class="course-description">{t.courseDescriptions[course.id]}</p>
         </li>)}
       </ul>
     </section>
@@ -63,7 +64,10 @@ const t = copy(language).linux;
   .course-list li { padding-block: 22px; border-bottom: 1px solid var(--line); break-inside: avoid; }
   .course-status { display: inline-block; padding: 4px 10px; border: 1px solid var(--line); font-family: var(--mono); font-size: .75rem; line-height: 1.5; }
   .course-status.is-completed { background: var(--foreground); color: var(--background); border-color: var(--foreground); }
-  .course-list p { margin-top: 12px; font-size: 1.0625rem; line-height: 1.5; }
+  .course-title { margin-top: 12px; font-size: 1.0625rem; line-height: 1.5; }
+  .course-title a { text-decoration-thickness: 1px; text-decoration-color: var(--line); }
+  .course-title a:hover { text-decoration-color: currentColor; }
+  .course-description { margin-top: 10px; color: var(--muted); font-size: .9375rem; line-height: 1.65; }
   @media (max-width: 900px) {
     .linux-columns { gap: 28px; }
   }

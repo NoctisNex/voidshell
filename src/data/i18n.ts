@@ -78,7 +78,12 @@ const translations = {
       "distributionsLabel": "Distros I've worked with",
       "learningLabel": "Coursework",
       "completed": "Completed",
-      "inProgress": "In progress"
+      "inProgress": "In progress",
+      "courseDescriptions": {
+        "rh104": "Practical Linux basics: working with the desktop and shell, managing files and permissions, installing packages, and checking network settings and system resources.",
+        "rh124": "Much of this course covers skills I already use in practice. I’m taking it mainly to formalise and consolidate that knowledge in RHEL: users, groups and permissions, systemd services, SSH, networking and DNF.",
+        "rh134": "Currently learning more advanced administration: shell scripting, scheduled tasks, storage with LVM, SELinux and boot troubleshooting, plus Podman containers and image mode for RHEL."
+      }
     },
     "experienceTitle": "What I work with.",
     "experienceLabel": "Experience",
@@ -237,7 +242,12 @@ const translations = {
       "distributionsLabel": "Distros, mit denen ich gearbeitet habe",
       "learningLabel": "Kurse",
       "completed": "Abgeschlossen",
-      "inProgress": "In Bearbeitung"
+      "inProgress": "In Bearbeitung",
+      "courseDescriptions": {
+        "rh104": "Grundlagen für den Linux-Alltag: mit Desktop und Shell arbeiten, Dateien und Permissions verwalten, Packages installieren sowie Netzwerkeinstellungen und Systemressourcen prüfen.",
+        "rh124": "Vieles aus diesem Kurs kann ich bereits praktisch anwenden. Der Kurs dient mir vor allem dazu, diese Kenntnisse im RHEL-Kontext systematisch zu festigen: Users, Groups und Permissions, systemd-Services, SSH, Networking und DNF.",
+        "rh134": "Hier vertiefe ich aktuell meine Kenntnisse in Shell Scripting, Task Scheduling, Storage mit LVM, SELinux und Boot Troubleshooting. Dazu kommen Podman-Container und Image Mode für RHEL."
+      }
     },
     "experienceTitle": "Womit ich arbeite.",
     "experienceLabel": "Erfahrung",
