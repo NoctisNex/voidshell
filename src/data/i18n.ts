@@ -259,7 +259,7 @@ const translations = {
       "Hell",
       "Dunkel"
     ],
-    "workExperience": "Meine bisherigen Stationen.",
+    "workExperience": "Meine bisherigen Erfahrungen.",
     "experienceGroups": [
       {
         "title": "Im Beruf",
