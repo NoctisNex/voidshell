@@ -32,6 +32,7 @@ test-results/
 .netlify/
 .vercel/
 .wrangler/
+AGENTS.md
 
 # Original brand package: retain locally; publish only the site's chosen assets
 /voidshell-brand-package.zip
