@@ -19,7 +19,8 @@
 }
 
 /* System follows the OS; an explicit choice overrides it. */
-:root[data-theme="light"] { color-scheme: light; }
+/* Preserve an explicit light choice when the browser auto-darkens websites. */
+:root[data-theme="light"] { color-scheme: only light; }
 :root[data-theme="dark"] {
   color-scheme: dark;
   --light-logo: none; --dark-logo: block;

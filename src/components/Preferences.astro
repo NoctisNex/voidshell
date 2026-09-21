@@ -6,6 +6,7 @@ const germanHome = localUrl('/de/');
 <script is:inline define:vars={{ home, germanHome }}>
   (() => {
     const root = document.documentElement;
+    const colorScheme = document.querySelector('meta[name="color-scheme"]');
     const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
     const read = key => { try { return localStorage.getItem(key); } catch { return null; } };
     const save = (key, value) => { try { localStorage.setItem(key, value); } catch { /* Preferences remain usable without storage. */ } };
@@ -15,6 +16,8 @@ const germanHome = localUrl('/de/');
     const applyTheme = () => {
       if (theme === 'system') delete root.dataset.theme;
       else root.dataset.theme = theme;
+      // Keep the browser's theme hint aligned with the user's explicit choice.
+      if (colorScheme) colorScheme.content = theme === 'light' ? 'only light' : theme === 'dark' ? 'dark' : 'light dark';
       const dark = theme === 'dark' || (theme === 'system' && systemTheme.matches);
       document.querySelectorAll('meta[name="theme-color"]').forEach(meta => {
         meta.content = dark ? '#000000' : '#ffffff';
