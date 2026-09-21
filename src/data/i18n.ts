@@ -28,12 +28,12 @@ const translations = {
     "hero": [
       "Linux.",
       "Systems.",
-      "Practical IT."
+      "Automation."
     ],
     "explore": "Explore the work",
     "portraitAlt": "Robin, wearing a black T-shirt.",
     "portraitCaption": "Robin Schmid",
-    "footnote": "Linux. Systems. Practical IT.",
+    "footnote": "Linux. Systems. Automation.",
     "collection": "What I've worked on so far",
     "workLabel": "01 / work",
     "workTitle": "Selected work.",
@@ -45,7 +45,7 @@ const translations = {
       "A little more",
       "about me."
     ],
-    "aboutTeaser": "I started out wanting to write software. Working in IT drew me towards the infrastructure underneath it. I like figuring out how the pieces fit, and what to check when they don't.",
+    "aboutTeaser": "Working in IT drew my interest towards servers, networks and Linux. I like understanding how systems work and figuring out why something goes wrong.",
     "moreAbout": "A little more about me",
     "contactLabel": "03 / contact",
     "contactTitle": "Get in touch.",
@@ -53,7 +53,7 @@ const translations = {
     "aboutTitle": "About Robin Schmid",
     "aboutDescription": "Robin Schmid, ICT-Fachmann EFZ. My IT experience, personal Linux desktop with Hyprland, Red Hat Academy coursework and interests beyond IT.",
     "aboutEyebrow": "About / voidshell",
-    "aboutIntroduction": "I started out wanting to write software. Working in IT support and systems engineering drew me towards the infrastructure underneath it: hardware, networks and the services that connect them.",
+    "aboutIntroduction": "I started out wanting to write software. While working in IT support and systems engineering, I realised that servers, networks and Linux particularly interested me. I want to understand how these systems work and interact.",
     "aboutPortraitAlt": "Portrait of Robin in a black T-shirt against a light wall.",
     "noUpdate": "No update at the moment.",
     "getInTouch": "Get in touch",
@@ -64,7 +64,7 @@ const translations = {
     "notFoundText": "The page may have moved, or the address may be wrong.",
     "backHome": "Back to voidshell",
     "socialAlt": "voidshell. Robin. Linux, systems and practical IT.",
-    "jobSearch": "Looking for a junior systems engineering role in the canton of Zurich, with a focus on infrastructure, Linux or second-level support.",
+    "jobSearch": "I'm looking for a junior systems engineer role in the canton of Zurich, ideally focused on Linux and IT infrastructure. I'm also interested in second-level support roles with opportunities to move into systems engineering.",
     "experienceLink": "Technical experience",
     "linux": {
       "link": "My Linux experience",
@@ -72,16 +72,16 @@ const translations = {
       "title": "Linux, day to day.",
       "personalLabel": "Personal use",
       "desktopTitle": "At home on Linux.",
-      "desktopText": "I've used Linux as my personal desktop for nearly a year. My current setup is CachyOS with Hyprland, and I prefer a keyboard-first workflow.",
+      "desktopText": "I've used Linux as my personal desktop for nearly a year. I currently use CachyOS with Hyprland and prefer working with keyboard shortcuts.",
       "setupTitle": "Setting up Arch Linux",
-      "setupText": "I've also installed and set up Arch Linux myself.",
+      "setupText": "I've installed and set up Arch Linux myself.",
       "distributionsLabel": "Distros I've worked with",
       "learningLabel": "Coursework",
       "completed": "Completed",
       "inProgress": "In progress",
       "courseDescriptions": {
         "rh104": "Practical Linux basics: working with the desktop and shell, managing files and permissions, installing packages, and checking network settings and system resources.",
-        "rh124": "Much of this course covers skills I already use in practice. I’m taking it mainly to formalise and consolidate that knowledge in RHEL: users, groups and permissions, systemd services, SSH, networking and DNF.",
+        "rh124": "I'm already familiar with much of this from practical experience. The course gives me a structured review of these topics in RHEL: users, groups and permissions, systemd services, SSH, networking and DNF.",
         "rh134": "Currently learning more advanced administration: shell scripting, scheduled tasks, storage with LVM, SELinux and boot troubleshooting, plus Podman containers and image mode for RHEL."
       }
     },
@@ -140,7 +140,7 @@ const translations = {
     "careerLabel": "Background",
     "personalLabel": "Beyond the tools",
     "approachTitle": "How I work.",
-    "approachText": "Troubleshooting is a puzzle. I ask questions, test assumptions and work through the pieces until the cause makes sense. Understanding why a fix works matters to me. I want to keep learning and solve more problems independently.",
+    "approachText": "When troubleshooting, I want to understand the cause and why a fix works. I ask questions, test my assumptions and follow the evidence. That helps me learn and work more independently.",
     "outsideTitle": "Away from IT.",
     "outsideText": "I play a range of games, including competitive FPS, and enjoy anime, manga, manhwa and webtoons. I also like swimming and parkour/freerunning, though I do them less often these days.",
     "nextTitle": "What's next.",
@@ -192,12 +192,12 @@ const translations = {
     "hero": [
       "Linux.",
       "Systeme.",
-      "IT für die Praxis."
+      "Automation."
     ],
     "explore": "Projekte ansehen",
     "portraitAlt": "Robin in einem schwarzen T-Shirt.",
     "portraitCaption": "Robin Schmid",
-    "footnote": "Linux. Systeme. IT für die Praxis.",
+    "footnote": "Linux. Systeme. Automation.",
     "collection": "Was ich bisher gemacht habe",
     "workLabel": "01 / Projekte",
     "workTitle": "Ausgewählte Projekte.",
@@ -209,7 +209,7 @@ const translations = {
       "Etwas mehr",
       "über mich."
     ],
-    "aboutTeaser": "Ursprünglich wollte ich Software entwickeln. Durch meine Arbeit in der IT habe ich gemerkt, dass mich die Infrastruktur dahinter besonders interessiert. Ich finde gerne heraus, wie alles zusammenspielt und wo es hakt, wenn etwas nicht funktioniert.",
+    "aboutTeaser": "Durch meine Arbeit in der IT ist mein Interesse an Servern, Netzwerken und Linux gewachsen. Ich möchte verstehen, wie Systeme funktionieren und wo es hakt, wenn etwas nicht läuft.",
     "moreAbout": "Mehr über mich",
     "contactLabel": "03 / Kontakt",
     "contactTitle": "Schreib mir.",
@@ -217,7 +217,7 @@ const translations = {
     "aboutTitle": "Über Robin Schmid",
     "aboutDescription": "Robin Schmid, ICT-Fachmann EFZ. Meine IT-Erfahrung, mein privater Linux-Desktop mit Hyprland, Kurse an der Red Hat Academy und Interessen ausserhalb der IT.",
     "aboutEyebrow": "Über mich / voidshell",
-    "aboutIntroduction": "Ursprünglich wollte ich Software entwickeln. Durch meine Arbeit im IT-Support und im System Engineering habe ich gemerkt, dass mich die Infrastruktur dahinter besonders interessiert: Hardware, Netzwerke und die Services, die alles miteinander verbinden.",
+    "aboutIntroduction": "Ursprünglich wollte ich Software entwickeln. Während meiner Arbeit im IT-Support und im System Engineering habe ich gemerkt, dass mich Server, Netzwerke und Linux besonders interessieren. Ich möchte verstehen, wie diese Systeme funktionieren und zusammenspielen.",
     "aboutPortraitAlt": "Porträt von Robin in einem schwarzen T-Shirt vor einer hellen Wand.",
     "noUpdate": "Zurzeit gibt es hier nichts Neues.",
     "getInTouch": "Kontakt aufnehmen",
@@ -228,7 +228,7 @@ const translations = {
     "notFoundText": "Vielleicht wurde die Seite verschoben oder die Adresse stimmt nicht.",
     "backHome": "Zurück zu voidshell",
     "socialAlt": "voidshell. Robin. Linux, Systeme und IT für die Praxis.",
-    "jobSearch": "Ich suche im Kanton Zürich eine Junior-Stelle im System Engineering mit Schwerpunkt Infrastruktur, Linux oder 2nd-Level-Support.",
+    "jobSearch": "Ich suche eine Stelle als Junior System Engineer im Kanton Zürich, idealerweise mit Fokus auf Linux und IT-Infrastruktur. Auch eine Stelle im 2nd-Level-Support mit Entwicklungsmöglichkeiten in Richtung System Engineering interessiert mich.",
     "experienceLink": "Technische Erfahrung",
     "linux": {
       "link": "Meine Linux-Erfahrung",
@@ -236,16 +236,16 @@ const translations = {
       "title": "Linux im Alltag.",
       "personalLabel": "Private Nutzung",
       "desktopTitle": "Mein Desktop läuft mit Linux.",
-      "desktopText": "Seit knapp einem Jahr nutze ich Linux auf meinem privaten Desktop. Aktuell verwende ich CachyOS mit Hyprland und bevorzuge einen Keyboard-first-Workflow.",
+      "desktopText": "Seit knapp einem Jahr nutze ich Linux auf meinem privaten Desktop. Aktuell verwende ich CachyOS mit Hyprland. Am liebsten arbeite ich mit Keyboard Shortcuts.",
       "setupTitle": "Arch Linux selbst einrichten",
-      "setupText": "Arch Linux habe ich auch schon selbst installiert und eingerichtet.",
+      "setupText": "Arch Linux habe ich selbst installiert und eingerichtet.",
       "distributionsLabel": "Distros, mit denen ich gearbeitet habe",
       "learningLabel": "Kurse",
       "completed": "Abgeschlossen",
       "inProgress": "In Bearbeitung",
       "courseDescriptions": {
         "rh104": "Grundlagen für den Linux-Alltag: mit Desktop und Shell arbeiten, Dateien und Permissions verwalten, Packages installieren sowie Netzwerkeinstellungen und Systemressourcen prüfen.",
-        "rh124": "Vieles aus diesem Kurs kann ich bereits praktisch anwenden. Der Kurs dient mir vor allem dazu, diese Kenntnisse im RHEL-Kontext systematisch zu festigen: Users, Groups und Permissions, systemd-Services, SSH, Networking und DNF.",
+        "rh124": "Vieles davon kenne ich bereits aus der Praxis. Im Kurs gehe ich diese Themen für RHEL nochmals strukturiert durch: Users, Groups und Permissions, systemd-Services, SSH, Networking und DNF.",
         "rh134": "Hier vertiefe ich aktuell meine Kenntnisse in Shell Scripting, Task Scheduling, Storage mit LVM, SELinux und Boot Troubleshooting. Dazu kommen Podman-Container und Image Mode für RHEL."
       }
     },
@@ -304,7 +304,7 @@ const translations = {
     "careerLabel": "Werdegang",
     "personalLabel": "Abseits der Technik",
     "approachTitle": "Wie ich arbeite.",
-    "approachText": "Troubleshooting ist für mich wie ein Puzzle. Ich stelle Fragen, prüfe meine Annahmen und gehe den Hinweisen nach, bis ich die Ursache gefunden habe. Ich will verstehen, warum ein Fix funktioniert. So lerne ich dazu, mit dem Ziel, immer mehr Probleme selbstständig zu lösen.",
+    "approachText": "Beim Troubleshooting möchte ich die Ursache verstehen und nachvollziehen können, warum ein Fix funktioniert. Ich stelle Fragen, prüfe meine Annahmen und gehe den Hinweisen nach. Dabei lerne ich dazu und kann zunehmend selbstständig arbeiten.",
     "outsideTitle": "In meiner Freizeit.",
     "outsideText": "Ich spiele gerne verschiedene Games, darunter auch Competitive FPS. Ausserdem mag ich Anime, Manga, Manhwa und Webtoons. Schwimmen und Parkour/Freerunning machen mir ebenfalls Spass, auch wenn ich inzwischen seltener dazu komme.",
     "nextTitle": "Wie es weitergeht.",
@@ -338,9 +338,9 @@ const translations = {
 export function copy(language: Language = 'en') {
   return {
     ...translations[language],
-    title: language === 'de' ? 'Robin Schmid · Linux, Systeme & IT für die Praxis' : site.title,
+    title: language === 'de' ? 'Robin Schmid · Linux, Systeme & Automation' : site.title,
     description: language === 'de' ? 'Robin Schmid, ICT-Fachmann EFZ. Mein Portfolio zu Infrastruktur, Linux, Cloud und Automatisierung mit Kursarbeiten zu Cloud-Lösungen und Docker.' : site.description,
-    introduction: language === 'de' ? 'Ich bin Robin Schmid, ICT-Fachmann EFZ. Ich bringe Erfahrung im IT-Support und mit PowerShell-Automation mit und vertiefe darauf aufbauend meine Kenntnisse in System Engineering, Linux und Cloud-Infrastruktur.' : site.introduction,
+    introduction: language === 'de' ? 'Ich bin Robin Schmid, ICT-Fachmann EFZ. Ich habe im IT-Support gearbeitet und Abläufe mit PowerShell automatisiert. Jetzt möchte ich mich im System Engineering weiterentwickeln, besonders in den Bereichen Linux und Cloud-Infrastruktur.' : site.introduction,
     currentFocus: language === 'de' ? site.currentFocusDe : site.currentFocus,
   };
 }

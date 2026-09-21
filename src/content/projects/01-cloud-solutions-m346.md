@@ -29,7 +29,7 @@ Other exercises covered static website hosting and objects in S3, plus attaching
 
 I put webservers behind an Application Load Balancer and connected an Auto Scaling Group with a minimum of two and a maximum of four instances. A target-tracking policy used the number of requests per target.
 
-I ran a Bash load test against the load balancer and observed CloudWatch alarms and the scaling activity. The group expanded from two to four instances, then returned to two after the load stopped. The write-up includes the alarms and instance activity for both directions. [Load balancing and scaling test (KN06)](https://gitlab.com/NoctisNex/cloud-native-bootcamp/-/blob/main/M346/KN06/README.md).
+I ran a Bash load test against the load balancer and observed CloudWatch alarms and the scaling activity. The group expanded from two to four instances, then returned to two after the load stopped. I documented the triggered alarms and the addition and removal of instances during scale-out and scale-in. [Load balancing and scaling test (KN06)](https://gitlab.com/NoctisNex/cloud-native-bootcamp/-/blob/main/M346/KN06/README.md).
 
 ## A troubleshooting example
 

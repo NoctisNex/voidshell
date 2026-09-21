@@ -18,7 +18,7 @@ Im Modul 169 an der TBZ habe ich Container-Services auf AWS EC2 deployt. Dabei h
 
 ## Image-Builds und Deployment
 
-Für eine Node.js/Express-Anwendung aus dem Kurs habe ich den Port und das Aussehen angepasst. Mit dem mitgelieferten Dockerfile habe ich ein Image gebaut und in die GitLab Container Registry gepusht. Danach habe ich die Anwendung auf EC2 deployt und im Browser getestet.
+Für eine Node.js/Express-Anwendung aus dem Kurs habe ich den Port und das Layout angepasst. Mit dem mitgelieferten Dockerfile habe ich ein Image gebaut und in die GitLab Container Registry gepusht. Danach habe ich die Anwendung auf EC2 deployt und im Browser getestet.
 
 Bei einem weiteren Kursbeispiel mit Flask und Redis habe ich das Docker-Compose-Manifest angepasst: den Published Port, das Named Volume und das gemeinsame Netzwerk. Anschliessend habe ich die laufenden Container überprüft und die Anwendung getestet. Beide Übungen bauten auf vorgegebenen Kursbeispielen auf. [Image- und Compose-Labs (KN04)](https://gitlab.com/NoctisNex/cloud-native-bootcamp/-/blob/main/M169/KN04/README.md).
 
@@ -28,7 +28,7 @@ Bei einem weiteren Kursbeispiel mit Flask und Redis habe ich das Docker-Compose-
 
 Ich habe einen Docker-Swarm-Cluster auf fünf EC2-Instanzen aufgebaut: drei Manager und zwei Worker in zwei Availability Zones. Für die Installation habe ich cloud-init verwendet. Die Manager habe ich in den Drain Mode versetzt, damit die Workloads auf den Workern liefen.
 
-Bei einem Service habe ich die Anzahl der Replicas von fünf auf zehn erhöht und gezielt drei Container entfernt. Swarm stellte die gewünschte Anzahl wieder her. In einem weiteren Lab habe ich einen Stack deklarativ in einem Manifest definiert, die Anzahl der Replicas geändert und eine Worker-Instanz beendet. Die Task History zeigte, dass die betroffenen Tasks auf dem verbleibenden Worker neu starteten. [Swarm-Setup und Recovery-Tests (KN04)](https://gitlab.com/NoctisNex/cloud-native-bootcamp/-/blob/main/M169/KN04/README.md).
+Bei einem Service habe ich die Anzahl der Replicas von fünf auf zehn erhöht und gezielt drei Container entfernt. Swarm stellte die gewünschte Anzahl wieder her. In einem weiteren Lab habe ich einen Stack über ein Manifest konfiguriert, die Anzahl der Replicas geändert und eine Worker-Instanz beendet. Die Task History zeigte, dass die betroffenen Tasks auf dem verbleibenden Worker neu starteten. [Swarm-Setup und Recovery-Tests (KN04)](https://gitlab.com/NoctisNex/cloud-native-bootcamp/-/blob/main/M169/KN04/README.md).
 
 ## Monitoring und Troubleshooting
 

@@ -17,7 +17,7 @@ In module 169 at TBZ, I deployed container services on AWS EC2 and tested how th
 
 ## Building and deploying containers
 
-I adapted the supplied Node.js/Express course application, changed its port and appearance, built an image with the provided Dockerfile and pushed it to the GitLab Container Registry. I then deployed it on EC2 and checked it in the browser.
+I adapted the supplied Node.js/Express course application, changed its port and layout, built an image with the provided Dockerfile and pushed it to the GitLab Container Registry. I then deployed it on EC2 and checked it in the browser.
 
 For a separate Flask/Redis example, I adjusted the Docker Compose manifest, including the published port, named volume and shared network. I inspected the running containers and tested the application. These were adaptations of course examples. [Image and Compose exercises (KN04)](https://gitlab.com/NoctisNex/cloud-native-bootcamp/-/blob/main/M169/KN04/README.md).
 
@@ -27,7 +27,7 @@ I also connected to a MariaDB container through an SSH tunnel without opening it
 
 I built a Docker Swarm cluster on five EC2 instances: three managers and two workers across two Availability Zones. I used cloud-init for the installation and put the managers into drain mode so workloads ran on the workers.
 
-I scaled a service from five to ten replicas, then deliberately removed three containers. Swarm restored the desired count. In a separate declarative stack exercise, I changed the replica count in the manifest and terminated a worker instance. The task history showed the lost tasks restarting on the remaining worker. [Swarm setup and recovery tests (KN04)](https://gitlab.com/NoctisNex/cloud-native-bootcamp/-/blob/main/M169/KN04/README.md).
+I scaled a service from five to ten replicas, then deliberately removed three containers. Swarm restored the desired count. In another lab, I configured a stack through a manifest, changed the replica count and terminated a worker instance. The task history showed the lost tasks restarting on the remaining worker. [Swarm setup and recovery tests (KN04)](https://gitlab.com/NoctisNex/cloud-native-bootcamp/-/blob/main/M169/KN04/README.md).
 
 ## Monitoring and troubleshooting
 

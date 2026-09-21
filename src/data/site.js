@@ -6,9 +6,9 @@ export const site = {
   url: 'https://voidshell.ch',
   // Use '/' on a custom domain. Use '/repository-name/' for GitHub project Pages.
   base: '/',
-  title: 'Robin Schmid · Linux, systems & practical IT',
+  title: 'Robin Schmid · Linux, systems & automation',
   description: 'Robin Schmid, ICT-Fachmann EFZ. Infrastructure, Linux, cloud and automation, with coursework in cloud solutions and Docker.',
-  introduction: "I'm Robin Schmid, an ICT-Fachmann EFZ with experience in IT support and PowerShell automation. I'm building on that foundation in systems engineering, Linux and cloud infrastructure.",
+  introduction: "I'm Robin Schmid, an ICT-Fachmann EFZ. I've worked in IT support and automated tasks with PowerShell. I now want to develop my skills in systems engineering, particularly Linux and cloud infrastructure.",
   email: 'robin.schmid@ik.me',
   profiles: [
     { label: 'GitHub', url: 'https://github.com/NoctisNex' },

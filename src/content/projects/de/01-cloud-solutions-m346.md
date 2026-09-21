@@ -30,7 +30,7 @@ Weitere Labs behandelten Static Website Hosting und Object Storage in S3. Ausser
 
 Ich habe Webserver hinter einem Application Load Balancer eingerichtet und eine Auto Scaling Group mit mindestens zwei und höchstens vier Instanzen angebunden. Eine Target Tracking Policy steuerte das Auto Scaling anhand der Anzahl Requests pro Target.
 
-Mit einem Bash-Script habe ich einen Load Test durchgeführt und dabei die CloudWatch Alarms und Scaling-Aktivitäten beobachtet. Unter Last stieg die Anzahl der Instanzen von zwei auf vier. Nach dem Test sank sie wieder auf zwei. Die Alarms und die Änderungen an den Instanzen sind für Scale-out und Scale-in dokumentiert. [Load Balancing und Auto Scaling (KN06)](https://gitlab.com/NoctisNex/cloud-native-bootcamp/-/blob/main/M346/KN06/README.md).
+Mit einem Bash-Script habe ich einen Load Test durchgeführt und dabei die CloudWatch Alarms und Scaling-Aktivitäten beobachtet. Unter Last stieg die Anzahl der Instanzen von zwei auf vier. Nach dem Test sank sie wieder auf zwei. Ich habe die ausgelösten Alarms und das Hinzufügen und Entfernen der Instanzen beim Scale-out und Scale-in dokumentiert. [Load Balancing und Auto Scaling (KN06)](https://gitlab.com/NoctisNex/cloud-native-bootcamp/-/blob/main/M346/KN06/README.md).
 
 ## Troubleshooting einer RDP-Verbindung
 
