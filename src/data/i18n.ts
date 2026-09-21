@@ -2,7 +2,8 @@ import { site, localUrl } from './site';
 
 export type Language = 'en' | 'de';
 
-// German copy uses Swiss spelling. Keep both versions in sync when editing content.
+// German copy uses Swiss spelling and established English technical terms.
+// Keep both versions in sync when editing content.
 const translations = {
   "en": {
     "nav": [
@@ -31,9 +32,9 @@ const translations = {
     ],
     "explore": "Explore the work",
     "portraitAlt": "Robin, wearing a black T-shirt.",
-    "portraitCaption": "The person behind voidshell",
+    "portraitCaption": "Robin Schmid",
     "footnote": "Linux. Systems. Practical IT.",
-    "collection": "An ongoing collection",
+    "collection": "What I've worked on so far",
     "workLabel": "01 / work",
     "workTitle": "Selected work.",
     "workNote": "Coursework from the Cloud-native, DevOps and Container course at TBZ, completed in 2026.",
@@ -41,13 +42,13 @@ const translations = {
     "emptyWork": "Project write-ups are on their way.",
     "aboutLabel": "02 / about",
     "aboutTeaserTitle": [
-      "There's a person",
-      "behind the systems."
+      "A little more",
+      "about me."
     ],
     "aboutTeaser": "I started out wanting to write software. Working in IT drew me towards the infrastructure underneath it. I like figuring out how the pieces fit, and what to check when they don't.",
     "moreAbout": "A little more about me",
     "contactLabel": "03 / contact",
-    "contactTitle": "Let's talk.",
+    "contactTitle": "Get in touch.",
     "emptyContact": "Contact details will be added here.",
     "aboutTitle": "About Robin Schmid",
     "aboutDescription": "Robin Schmid, ICT-Fachmann EFZ. My path into infrastructure, my approach to troubleshooting, and life away from IT.",
@@ -167,7 +168,7 @@ const translations = {
     "technologies": "Technologien",
     "projectInfo": "Projektinformationen",
     "exampleNotice": "Dieser Text zeigt beispielhaft, wie eine Projektbeschreibung aufgebaut ist. Er beschreibt kein abgeschlossenes Projekt.",
-    "repository": "Quellcode",
+    "repository": "Repository",
     "live": "Zum Projekt",
     "hero": [
       "Linux.",
@@ -176,28 +177,28 @@ const translations = {
     ],
     "explore": "Projekte ansehen",
     "portraitAlt": "Robin in einem schwarzen T-Shirt.",
-    "portraitCaption": "Der Mensch hinter voidshell",
+    "portraitCaption": "Robin Schmid",
     "footnote": "Linux. Systeme. IT für die Praxis.",
-    "collection": "Eine Sammlung, die weiterwächst",
+    "collection": "Was ich bisher gemacht habe",
     "workLabel": "01 / Projekte",
-    "workTitle": "Ausgewählte Arbeiten.",
+    "workTitle": "Ausgewählte Projekte.",
     "workNote": "Diese Arbeiten sind im Kurs «Cloud-native, DevOps und Container» an der TBZ entstanden, den ich 2026 abgeschlossen habe.",
     "exampleWork": "Die folgenden Einträge sind Beispiele. Später stelle ich hier meine eigenen Projekte vor.",
     "emptyWork": "Projektbeschreibungen folgen.",
     "aboutLabel": "02 / Über mich",
     "aboutTeaserTitle": [
-      "Der Mensch",
-      "hinter den Systemen."
+      "Etwas mehr",
+      "über mich."
     ],
-    "aboutTeaser": "Ursprünglich wollte ich Software entwickeln. Bei meiner Arbeit in der IT hat mich dann die Infrastruktur dahinter immer mehr interessiert. Ich gehe den Dingen gerne auf den Grund: Wie spielen die einzelnen Komponenten zusammen, und wo setze ich an, wenn etwas nicht funktioniert?",
+    "aboutTeaser": "Ursprünglich wollte ich Software entwickeln. Durch meine Arbeit in der IT habe ich gemerkt, dass mich die Infrastruktur dahinter besonders interessiert. Ich finde gerne heraus, wie alles zusammenspielt und wo es hakt, wenn etwas nicht funktioniert.",
     "moreAbout": "Mehr über mich",
     "contactLabel": "03 / Kontakt",
-    "contactTitle": "Reden wir miteinander.",
+    "contactTitle": "Schreib mir.",
     "emptyContact": "Kontaktdaten folgen.",
     "aboutTitle": "Über Robin Schmid",
-    "aboutDescription": "Robin Schmid, ICT-Fachmann EFZ. Wie ich zur Systemtechnik gekommen bin, wie ich bei der Fehlersuche vorgehe und was mich ausserhalb der IT interessiert.",
+    "aboutDescription": "Robin Schmid, ICT-Fachmann EFZ. Mein Weg ins System Engineering, mein Vorgehen beim Troubleshooting und meine Interessen ausserhalb der IT.",
     "aboutEyebrow": "Über mich / voidshell",
-    "aboutIntroduction": "Ursprünglich wollte ich Software entwickeln. Bei meiner Arbeit im IT-Support und in der Systemtechnik hat mich dann die Infrastruktur dahinter immer mehr interessiert: Hardware, Netzwerke und die Dienste, die alles miteinander verbinden.",
+    "aboutIntroduction": "Ursprünglich wollte ich Software entwickeln. Durch meine Arbeit im IT-Support und im System Engineering habe ich gemerkt, dass mich die Infrastruktur dahinter besonders interessiert: Hardware, Netzwerke und die Services, die alles miteinander verbinden.",
     "aboutPortraitAlt": "Porträt von Robin in einem schwarzen T-Shirt vor einer hellen Wand.",
     "noUpdate": "Zurzeit gibt es hier nichts Neues.",
     "getInTouch": "Kontakt aufnehmen",
@@ -265,9 +266,9 @@ const translations = {
     "careerLabel": "Werdegang",
     "personalLabel": "Abseits der Technik",
     "approachTitle": "Wie ich arbeite.",
-    "approachText": "Fehlersuche ist für mich wie ein Puzzle. Ich stelle Fragen, überprüfe meine Annahmen und gehe den Hinweisen Schritt für Schritt nach, bis ich die Ursache verstehe. Dabei ist mir wichtig, auch zu verstehen, warum eine Lösung funktioniert. Ich möchte weiter dazulernen und immer mehr Probleme selbstständig lösen.",
-    "outsideTitle": "Abseits der IT.",
-    "outsideText": "In meiner Freizeit spiele ich verschiedene Games, darunter auch kompetitive Ego-Shooter. Ausserdem mag ich Anime, Manga, Manhwa und Webtoons. Ich gehe auch gerne schwimmen und mache Parkour/Freerunning, komme aber inzwischen seltener dazu.",
+    "approachText": "Troubleshooting ist für mich wie ein Puzzle. Ich stelle Fragen, prüfe meine Annahmen und gehe den Hinweisen nach, bis ich die Ursache gefunden habe. Ich will verstehen, warum ein Fix funktioniert. So lerne ich dazu, mit dem Ziel, immer mehr Probleme selbstständig zu lösen.",
+    "outsideTitle": "In meiner Freizeit.",
+    "outsideText": "Ich spiele gerne verschiedene Games, darunter auch Competitive FPS. Ausserdem mag ich Anime, Manga, Manhwa und Webtoons. Schwimmen und Parkour/Freerunning machen mir ebenfalls Spass, auch wenn ich inzwischen seltener dazu komme.",
     "nextTitle": "Wie es weitergeht.",
     "courseContext": "Kurs «Cloud-native, DevOps und Container» an der TBZ, abgeschlossen 2026.",
     "courseLink": "Zu den Kursarbeiten",
@@ -276,23 +277,23 @@ const translations = {
         "company": "Spital Zollikerberg",
         "role": "Lehre als ICT-Fachmann EFZ",
         "dates": "Aug. 2023 bis Aug. 2026",
-        "summary": "1st- und 2nd-Level-Support für Mitarbeitende auf den Stationen und in den Abteilungen des Spitals: vor Ort, per Fernzugriff und am Telefon.",
+        "summary": "1st- und 2nd-Level-Support für Mitarbeitende auf den Stationen und in den Abteilungen des Spitals: vor Ort, remote und am Telefon.",
         "points": [
-          "Tickets in TOPdesk bearbeitet, Anrufe aus dem Callcenter entgegengenommen und Probleme gelöst. Tickets bei Bedarf an die zuständigen Fachstellen weitergeleitet.",
+          "Tickets in TOPdesk bearbeitet und Anrufe aus dem Callcenter entgegengenommen. Probleme gelöst oder Tickets bei Bedarf eskaliert.",
           "Drucker-, Hardware- und Softwareprobleme sowie einfache Netzwerkstörungen behoben und Aufgaben rund um Active Directory, DNS und DHCP übernommen.",
-          "On- und Offboarding im Active Directory mit eigenen PowerShell-Skripten automatisiert.",
+          "Onboarding und Offboarding in Active Directory mit eigenen PowerShell-Scripts automatisiert.",
           "Über 100 PCs und Notebooks mit SCCM eingerichtet und verwaltet sowie Mobilgeräte mit Workspace ONE betreut."
         ]
       },
       {
         "company": "Huanga IT Solutions",
-        "role": "Praktikum in der Systemtechnik",
+        "role": "Praktikum im System Engineering",
         "dates": "Nov. 2022 bis Juni 2023",
         "summary": "Microsoft 365 und Azure Active Directory verwaltet und bei der Administration von Servern mitgearbeitet.",
         "points": []
       }
     ],
-    "personalProjectsContext": "In eigenen Lernprojekten habe ich mich mit Discord-Befehlen, Rollenprüfungen, asynchronen Event-Handlern und Logging beschäftigt. Dazu kommen responsive Webseiten mit kleinen JavaScript-Interaktionen."
+    "personalProjectsContext": "In eigenen Lernprojekten habe ich mich mit Discord Commands, Role Checks, Async Event Handlers und Logging beschäftigt. Ausserdem habe ich responsive Weblayouts und kleine Interaktionen mit JavaScript umgesetzt."
   }
 };
 
@@ -301,7 +302,7 @@ export function copy(language: Language = 'en') {
     ...translations[language],
     title: language === 'de' ? 'Robin Schmid · Linux, Systeme & IT für die Praxis' : site.title,
     description: language === 'de' ? 'Robin Schmid, ICT-Fachmann EFZ. Mein Portfolio zu Infrastruktur, Linux, Cloud und Automatisierung mit Kursarbeiten zu Cloud-Lösungen und Docker.' : site.description,
-    introduction: language === 'de' ? 'Ich bin Robin Schmid, ICT-Fachmann EFZ mit Erfahrung im IT-Support und in der Automatisierung mit PowerShell. Auf dieser Grundlage vertiefe ich meine Kenntnisse in Systemtechnik, Linux und Cloud-Infrastruktur.' : site.introduction,
+    introduction: language === 'de' ? 'Ich bin Robin Schmid, ICT-Fachmann EFZ. Ich bringe Erfahrung im IT-Support und mit PowerShell-Automation mit und vertiefe darauf aufbauend meine Kenntnisse in System Engineering, Linux und Cloud-Infrastruktur.' : site.introduction,
     currentFocus: language === 'de' ? site.currentFocusDe : site.currentFocus,
   };
 }
