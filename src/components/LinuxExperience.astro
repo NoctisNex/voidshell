@@ -1,0 +1,76 @@
+---
+import { copy, type Language } from '../data/i18n';
+import { linuxCourses, linuxDistributions } from '../data/linux';
+
+interface Props { language?: Language }
+const { language = 'en' } = Astro.props;
+const t = copy(language).linux;
+---
+<section class="linux-section container" id="linux" aria-labelledby="linux-title">
+  <header class="section-heading">
+    <p class="eyebrow">{t.label}</p>
+    <h2 id="linux-title">{t.title}</h2>
+  </header>
+
+  <div class="linux-columns">
+    <section class="desktop" aria-labelledby="linux-desktop-title">
+      <p class="eyebrow">{t.personalLabel}</p>
+      <h3 id="linux-desktop-title">{t.desktopTitle}</h3>
+      <p class="desktop-text">{t.desktopText}</p>
+
+      <dl class="setup">
+        <dt>{t.setupTitle}</dt>
+        <dd>{t.setupText}</dd>
+      </dl>
+
+      <div class="distributions">
+        <p id="linux-distros-label">{t.distributionsLabel}</p>
+        <ul aria-labelledby="linux-distros-label">
+          {linuxDistributions.map(distribution => <li>{distribution}</li>)}
+        </ul>
+      </div>
+    </section>
+
+    <section class="learning" aria-labelledby="linux-learning-title">
+      <p class="eyebrow">{t.learningLabel}</p>
+      <h3 id="linux-learning-title" lang="en">Red Hat Academy</h3>
+      <ul class="course-list">
+        {linuxCourses.map(course => <li>
+          <span class:list={['course-status', { 'is-completed': course.status === 'completed' }]}>{t[course.status]}</span>
+          <p lang="en">{course.title}</p>
+        </li>)}
+      </ul>
+    </section>
+  </div>
+</section>
+
+<style>
+  .linux-section { padding-block: 56px 72px; border-top: 1px solid var(--line); }
+  .linux-section .section-heading { margin-bottom: 36px; }
+  .linux-columns { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(32px, 5vw, 72px); align-items: start; }
+  .desktop { padding: clamp(24px, 3vw, 36px); background: var(--subtle); }
+  .eyebrow { color: var(--muted); }
+  h3 { margin-top: 14px; font-size: clamp(1.4rem, 2vw, 1.75rem); line-height: 1.3; letter-spacing: -.025em; }
+  .desktop-text { margin-top: 20px; color: var(--muted); }
+  .setup { margin: 28px 0 0; padding-top: 24px; border-top: 1px solid var(--line); }
+  .setup dt, .distributions > p { font-size: .875rem; font-weight: 500; }
+  .setup dd { margin: 8px 0 0; color: var(--muted); font-size: .9375rem; }
+  .distributions { margin-top: 28px; }
+  .distributions ul { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 12px 0 0; }
+  .distributions li { padding: 5px 10px; border: 1px solid var(--line); font-family: var(--mono); font-size: .75rem; }
+  .learning { padding-top: 4px; }
+  .course-list { list-style: none; margin: 24px 0 0; padding: 0; border-top: 1px solid var(--line); }
+  .course-list li { padding-block: 22px; border-bottom: 1px solid var(--line); break-inside: avoid; }
+  .course-status { display: inline-block; padding: 4px 10px; border: 1px solid var(--line); font-family: var(--mono); font-size: .75rem; line-height: 1.5; }
+  .course-status.is-completed { background: var(--foreground); color: var(--background); border-color: var(--foreground); }
+  .course-list p { margin-top: 12px; font-size: 1.0625rem; line-height: 1.5; }
+  @media (max-width: 900px) {
+    .linux-columns { gap: 28px; }
+  }
+  @media (max-width: 700px) {
+    .linux-section { padding-block: 40px 48px; }
+    .linux-section .section-heading { margin-bottom: 28px; }
+    .linux-columns { grid-template-columns: 1fr; gap: 36px; }
+    .learning { padding-top: 0; }
+  }
+</style>

@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import ExperienceOverview from './ExperienceOverview.astro';
+import LinuxExperience from './LinuxExperience.astro';
 import { site, localUrl } from '../data/site';
 import { copy, pageUrl, type Language } from '../data/i18n';
 interface Props { language?: Language }
@@ -38,6 +39,7 @@ const t = copy(language);
   </section>
 
   <ExperienceOverview language={language} />
+  <LinuxExperience language={language} />
 
   <section class="personal container" aria-label={t.personalLabel}>
     <div><h2>{t.approachTitle}</h2><p>{t.approachText}</p></div>
