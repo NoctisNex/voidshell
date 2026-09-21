@@ -156,7 +156,7 @@ const translations = {
       "Kontakt"
     ],
     "navigation": "Hauptnavigation",
-    "homeLabel": "voidshell Startseite",
+    "homeLabel": "Zur voidshell-Startseite",
     "languageLabel": "Sprache",
     "skip": "Zum Inhalt springen",
     "backTop": "Nach oben",
@@ -166,49 +166,49 @@ const translations = {
     "status": "Status",
     "technologies": "Technologien",
     "projectInfo": "Projektinformationen",
-    "exampleNotice": "Dieser Beispieltext zeigt den Aufbau einer Projektbeschreibung. Er beschreibt keine abgeschlossene Arbeit.",
+    "exampleNotice": "Dieser Text zeigt beispielhaft, wie eine Projektbeschreibung aufgebaut ist. Er beschreibt kein abgeschlossenes Projekt.",
     "repository": "Quellcode",
     "live": "Zum Projekt",
     "hero": [
       "Linux.",
       "Systeme.",
-      "IT mit Praxis."
+      "IT für die Praxis."
     ],
     "explore": "Projekte ansehen",
     "portraitAlt": "Robin in einem schwarzen T-Shirt.",
     "portraitCaption": "Der Mensch hinter voidshell",
-    "footnote": "Linux. Systeme. IT mit Praxis.",
+    "footnote": "Linux. Systeme. IT für die Praxis.",
     "collection": "Eine Sammlung, die weiterwächst",
     "workLabel": "01 / Projekte",
     "workTitle": "Ausgewählte Arbeiten.",
-    "workNote": "Kursarbeiten aus dem 2026 abgeschlossenen Kurs Cloud-native, DevOps und Container an der TBZ.",
-    "exampleWork": "Die folgenden Einträge sind Beispiele. Hier werden später eigene Projektbeschreibungen erscheinen.",
+    "workNote": "Diese Arbeiten sind im Kurs «Cloud-native, DevOps und Container» an der TBZ entstanden, den ich 2026 abgeschlossen habe.",
+    "exampleWork": "Die folgenden Einträge sind Beispiele. Später stelle ich hier meine eigenen Projekte vor.",
     "emptyWork": "Projektbeschreibungen folgen.",
     "aboutLabel": "02 / Über mich",
     "aboutTeaserTitle": [
       "Der Mensch",
       "hinter den Systemen."
     ],
-    "aboutTeaser": "Ursprünglich wollte ich Software entwickeln. Durch meine Arbeit in der IT habe ich mein Interesse an der Infrastruktur dahinter entdeckt. Ich finde gerne heraus, wie die einzelnen Teile zusammenspielen und wo ich ansetzen muss, wenn etwas nicht funktioniert.",
+    "aboutTeaser": "Ursprünglich wollte ich Software entwickeln. Bei meiner Arbeit in der IT hat mich dann die Infrastruktur dahinter immer mehr interessiert. Ich gehe den Dingen gerne auf den Grund: Wie spielen die einzelnen Komponenten zusammen, und wo setze ich an, wenn etwas nicht funktioniert?",
     "moreAbout": "Mehr über mich",
     "contactLabel": "03 / Kontakt",
-    "contactTitle": "Kommen wir ins Gespräch.",
+    "contactTitle": "Reden wir miteinander.",
     "emptyContact": "Kontaktdaten folgen.",
     "aboutTitle": "Über Robin Schmid",
-    "aboutDescription": "Robin Schmid, ICT-Fachmann EFZ. Mein Weg zur Infrastruktur, meine Herangehensweise an die Fehlersuche und mein Leben abseits der IT.",
+    "aboutDescription": "Robin Schmid, ICT-Fachmann EFZ. Wie ich zur Systemtechnik gekommen bin, wie ich bei der Fehlersuche vorgehe und was mich ausserhalb der IT interessiert.",
     "aboutEyebrow": "Über mich / voidshell",
-    "aboutIntroduction": "Ursprünglich wollte ich Software entwickeln. Durch IT-Support und Systemtechnik habe ich mein Interesse an der Infrastruktur dahinter entdeckt: Hardware, Netzwerke und die Dienste, die alles verbinden.",
+    "aboutIntroduction": "Ursprünglich wollte ich Software entwickeln. Bei meiner Arbeit im IT-Support und in der Systemtechnik hat mich dann die Infrastruktur dahinter immer mehr interessiert: Hardware, Netzwerke und die Dienste, die alles miteinander verbinden.",
     "aboutPortraitAlt": "Porträt von Robin in einem schwarzen T-Shirt vor einer hellen Wand.",
     "noUpdate": "Zurzeit gibt es hier nichts Neues.",
     "getInTouch": "Kontakt aufnehmen",
     "notFoundTitle": "Seite nicht gefunden",
-    "notFoundDescription": "Diese Seite wurde auf voidshell nicht gefunden.",
+    "notFoundDescription": "Die gesuchte Seite konnte auf voidshell nicht gefunden werden.",
     "notFoundLabel": "404 / Seite nicht gefunden",
-    "notFoundHeading": "Hier ist nichts.",
-    "notFoundText": "Die Seite wurde möglicherweise verschoben oder die Adresse ist falsch.",
+    "notFoundHeading": "Hier gibt es nichts zu sehen.",
+    "notFoundText": "Vielleicht wurde die Seite verschoben oder die Adresse stimmt nicht.",
     "backHome": "Zurück zu voidshell",
-    "socialAlt": "voidshell. Robin. Linux, Systeme und praktische IT.",
-    "jobSearch": "Ich suche eine Junior-Stelle im System Engineering im Kanton Zürich, mit Schwerpunkt Infrastruktur, Linux oder 2nd-Level-Support.",
+    "socialAlt": "voidshell. Robin. Linux, Systeme und IT für die Praxis.",
+    "jobSearch": "Ich suche im Kanton Zürich eine Junior-Stelle im System Engineering mit Schwerpunkt Infrastruktur, Linux oder 2nd-Level-Support.",
     "experienceLink": "Technische Erfahrung",
     "experienceTitle": "Womit ich arbeite.",
     "experienceLabel": "Erfahrung",
@@ -265,43 +265,43 @@ const translations = {
     "careerLabel": "Werdegang",
     "personalLabel": "Abseits der Technik",
     "approachTitle": "Wie ich arbeite.",
-    "approachText": "Fehlersuche ist für mich ein Puzzle. Ich stelle Fragen, prüfe Annahmen und setze die Teile zusammen, bis ich die Ursache verstehe. Mir ist wichtig, warum eine Lösung funktioniert. Ich möchte weiterlernen und immer mehr Probleme selbstständig lösen.",
+    "approachText": "Fehlersuche ist für mich wie ein Puzzle. Ich stelle Fragen, überprüfe meine Annahmen und gehe den Hinweisen Schritt für Schritt nach, bis ich die Ursache verstehe. Dabei ist mir wichtig, auch zu verstehen, warum eine Lösung funktioniert. Ich möchte weiter dazulernen und immer mehr Probleme selbstständig lösen.",
     "outsideTitle": "Abseits der IT.",
-    "outsideText": "Ich spiele verschiedene Games, darunter kompetitive FPS, und mag Anime, Manga, Manhwa und Webtoons. Auch Schwimmen und Parkour/Freerunning gehören dazu, obwohl ich heute seltener dazu komme.",
-    "nextTitle": "Was als Nächstes kommt.",
-    "courseContext": "Kurs Cloud-native, DevOps und Container an der TBZ, abgeschlossen 2026.",
+    "outsideText": "In meiner Freizeit spiele ich verschiedene Games, darunter auch kompetitive Ego-Shooter. Ausserdem mag ich Anime, Manga, Manhwa und Webtoons. Ich gehe auch gerne schwimmen und mache Parkour/Freerunning, komme aber inzwischen seltener dazu.",
+    "nextTitle": "Wie es weitergeht.",
+    "courseContext": "Kurs «Cloud-native, DevOps und Container» an der TBZ, abgeschlossen 2026.",
     "courseLink": "Zu den Kursarbeiten",
     "career": [
       {
         "company": "Spital Zollikerberg",
         "role": "Lehre als ICT-Fachmann EFZ",
         "dates": "Aug. 2023 bis Aug. 2026",
-        "summary": "1st- und 2nd-Level-Support für Mitarbeitende aller Stationen und Abteilungen, direkt vor Ort im Spital, per Fernzugriff und am Telefon.",
+        "summary": "1st- und 2nd-Level-Support für Mitarbeitende auf den Stationen und in den Abteilungen des Spitals: vor Ort, per Fernzugriff und am Telefon.",
         "points": [
-          "Tickets in TOPdesk bearbeitet und Anrufe aus dem Callcenter entgegengenommen, Probleme gelöst und Tickets bei Bedarf eskaliert.",
+          "Tickets in TOPdesk bearbeitet, Anrufe aus dem Callcenter entgegengenommen und Probleme gelöst. Tickets bei Bedarf an die zuständigen Fachstellen weitergeleitet.",
           "Drucker-, Hardware- und Softwareprobleme sowie einfache Netzwerkstörungen behoben und Aufgaben rund um Active Directory, DNS und DHCP übernommen.",
           "On- und Offboarding im Active Directory mit eigenen PowerShell-Skripten automatisiert.",
-          "Über 100 PCs und Notebooks mit SCCM aufgesetzt und verwaltet, Mobilgeräte mit Workspace ONE."
+          "Über 100 PCs und Notebooks mit SCCM eingerichtet und verwaltet sowie Mobilgeräte mit Workspace ONE betreut."
         ]
       },
       {
         "company": "Huanga IT Solutions",
         "role": "Praktikum in der Systemtechnik",
         "dates": "Nov. 2022 bis Juni 2023",
-        "summary": "Microsoft 365 und Azure Active Directory administriert und in der Serveradministration mitgearbeitet.",
+        "summary": "Microsoft 365 und Azure Active Directory verwaltet und bei der Administration von Servern mitgearbeitet.",
         "points": []
       }
     ],
-    "personalProjectsContext": "Lernprojekte: Discord-Befehle, Rollenprüfungen, asynchrone Event-Handler und Logging sowie responsive Webseiten und kleine JavaScript-Interaktionen."
+    "personalProjectsContext": "In eigenen Lernprojekten habe ich mich mit Discord-Befehlen, Rollenprüfungen, asynchronen Event-Handlern und Logging beschäftigt. Dazu kommen responsive Webseiten mit kleinen JavaScript-Interaktionen."
   }
 };
 
 export function copy(language: Language = 'en') {
   return {
     ...translations[language],
-    title: language === 'de' ? 'Robin Schmid · Linux, Systeme & praktische IT' : site.title,
-    description: language === 'de' ? 'Robin Schmid, ICT-Fachmann EFZ. Infrastruktur, Linux, Cloud und Automatisierung, mit Kursarbeiten zu Cloud-Lösungen und Docker.' : site.description,
-    introduction: language === 'de' ? 'Ich bin Robin Schmid, ICT-Fachmann EFZ mit Erfahrung im IT-Support und in der PowerShell-Automatisierung. Darauf baue ich in Systemtechnik, Linux und Cloud-Infrastruktur auf.' : site.introduction,
+    title: language === 'de' ? 'Robin Schmid · Linux, Systeme & IT für die Praxis' : site.title,
+    description: language === 'de' ? 'Robin Schmid, ICT-Fachmann EFZ. Mein Portfolio zu Infrastruktur, Linux, Cloud und Automatisierung mit Kursarbeiten zu Cloud-Lösungen und Docker.' : site.description,
+    introduction: language === 'de' ? 'Ich bin Robin Schmid, ICT-Fachmann EFZ mit Erfahrung im IT-Support und in der Automatisierung mit PowerShell. Auf dieser Grundlage vertiefe ich meine Kenntnisse in Systemtechnik, Linux und Cloud-Infrastruktur.' : site.introduction,
     currentFocus: language === 'de' ? site.currentFocusDe : site.currentFocus,
   };
 }
