@@ -9,6 +9,15 @@ export const linuxDistributions = [
   'RHEL',
 ];
 
+// A dated snapshot, updated manually as the course progresses.
+export const kodeKloud = {
+  progress: 28,
+  updatedAt: '2026-11-03',
+  courseTitle: 'Prep Course - Red Hat Certified System Administrator (RHCSA)',
+  courseUrl: 'https://kodekloud.com/courses/red-hat-certified-system-administrator-rhcsa',
+  engineerUrl: 'https://engineer.kodekloud.com/',
+} as const;
+
 export const linuxCourses = [
   {
     id: 'rh104',
@@ -17,16 +26,9 @@ export const linuxCourses = [
     url: 'https://www.redhat.com/en/services/training/getting-started-with-linux-fundamentals',
   },
   {
-    id: 'rh124',
-    title: 'Red Hat System Administration I 9.3',
-    status: 'inProgress',
-    // The 9.3 outline is also documented at https://www.redhat.com/ko/engage/bridge-the-gap/automation.
-    url: 'https://www.redhat.com/en/services/training/rh124-red-hat-system-administration-i',
-  },
-  {
     id: 'rh134',
     title: 'Red Hat System Administration II 10.0',
-    status: 'inProgress',
+    status: 'planned',
     url: 'https://www.redhat.com/en/services/training/rh134-red-hat-system-administration-ii',
   },
 ] as const;

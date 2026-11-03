@@ -1,0 +1,73 @@
+---
+import { copy, type Language } from '../data/i18n';
+import { kodeKloud } from '../data/linux';
+
+interface Props { language?: Language }
+const { language = 'en' } = Astro.props;
+const t = copy(language).learning;
+const updatedAt = new Date(`${kodeKloud.updatedAt}T00:00:00Z`).toLocaleDateString(
+  language === 'de' ? 'de-CH' : 'en-GB',
+  { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' },
+);
+---
+<section class="current-learning container" id="learning" aria-labelledby="learning-title">
+  <header class="section-heading">
+    <p class="eyebrow">{t.label}</p>
+    <h2 id="learning-title">{t.title}</h2>
+  </header>
+  <div class="learning-columns">
+    <div class="learning-story">
+      <p>{t.motivation}</p>
+      <p>{t.approach}</p>
+    </div>
+    <div class="learning-practice">
+      <section aria-labelledby="kodekloud-course-title">
+        <p class="eyebrow">{t.courseLabel}</p>
+        <h3 id="kodekloud-course-title" lang="en"><a href={kodeKloud.courseUrl}>{kodeKloud.courseTitle}</a></h3>
+        <p>{t.courseText}</p>
+        <div class="course-progress">
+          <label for="kodekloud-progress">{t.progressLabel} <span>{kodeKloud.progress}% {t.complete}</span></label>
+          <progress id="kodekloud-progress" value={kodeKloud.progress} max="100">{kodeKloud.progress}%</progress>
+          <p class="progress-date">{t.asOf} <time datetime={kodeKloud.updatedAt}>{updatedAt}</time></p>
+        </div>
+      </section>
+      <section class="engineer-practice" aria-labelledby="kodekloud-engineer-title">
+        <p class="eyebrow">{t.engineerLabel}</p>
+        <h3 id="kodekloud-engineer-title" lang="en"><a href={kodeKloud.engineerUrl}>KodeKloud Engineer</a></h3>
+        <p>{t.engineerText}</p>
+        <p class="practice-context">{t.engineerContext}</p>
+      </section>
+    </div>
+  </div>
+</section>
+
+<style>
+  .current-learning { padding-block: 56px 72px; border-top: 1px solid var(--line); }
+  .section-heading { margin-bottom: 36px; }
+  .eyebrow { color: var(--muted); }
+  .learning-columns { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(32px, 5vw, 72px); align-items: start; }
+  .learning-story p { max-width: 540px; color: var(--muted); font-size: 1.0625rem; }
+  .learning-story p + p { margin-top: 24px; }
+  h3 { margin: 12px 0 0; font-size: 1.25rem; font-weight: 500; line-height: 1.45; letter-spacing: -.02em; }
+  h3 a { text-decoration-thickness: 1px; text-decoration-color: var(--line); }
+  h3 a:hover { text-decoration-color: currentColor; }
+  .learning-practice section > p:not(.eyebrow) { margin-top: 16px; color: var(--muted); font-size: .9375rem; }
+  .course-progress { margin-top: 24px; }
+  .course-progress label { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px 16px; font-size: .875rem; }
+  .course-progress label span { font-family: var(--mono); font-size: .8125rem; }
+  progress { display: block; width: 100%; height: 6px; margin-top: 12px; border: 0; border-radius: 0; appearance: none; background: var(--line); color: var(--foreground); }
+  progress::-webkit-progress-bar { background: var(--line); }
+  progress::-webkit-progress-value { background: var(--foreground); }
+  progress::-moz-progress-bar { background: var(--foreground); }
+  .progress-date { margin-top: 10px; color: var(--muted); font-size: .8125rem; }
+  .engineer-practice { margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--line); }
+  .learning-practice section > .practice-context { font-size: .8125rem; }
+  @media (max-width: 900px) {
+    .learning-columns { gap: 28px; }
+  }
+  @media (max-width: 700px) {
+    .current-learning { padding-block: 40px 48px; }
+    .section-heading { margin-bottom: 28px; }
+    .learning-columns { grid-template-columns: 1fr; gap: 32px; }
+  }
+</style>

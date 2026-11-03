@@ -17,9 +17,9 @@ export const site = {
   ],
   // Add a sentence here to update the About page's "What's next" section.
   // An empty value keeps the section with a neutral "No update" message.
-  currentFocus: '',
+  currentFocus: "After KodeKloud's RHCSA prep course, I plan to take Red Hat System Administration II 10.0.",
   // German version of the same update.
-  currentFocusDe: '',
+  currentFocusDe: 'Nach dem RHCSA-Vorbereitungskurs von KodeKloud plane ich Red Hat System Administration II 10.0.',
   navigation: [
     { label: 'work', href: '/#work' },
     { label: 'about', href: '/about/' },
