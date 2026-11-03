@@ -113,9 +113,9 @@ const translations = {
       {
         "title": "At work",
         "items": [
-          "PowerShell / Active Directory",
-          "Microsoft 365 / Exchange",
-          "SCCM / Workspace ONE"
+          "Windows / PowerShell / Active Directory",
+          "Microsoft 365 / Microsoft Entra ID / SCCM",
+          "TOPdesk / WAPT / Aruba ClearPass"
         ],
         "id": "work"
       },
@@ -164,20 +164,24 @@ const translations = {
         "company": "Spital Zollikerberg",
         "role": "ICT-Fachmann EFZ apprenticeship",
         "dates": "Aug 2023 to Aug 2026",
-        "summary": "First- and second-level support for staff across hospital wards and departments, onsite, remotely and by phone.",
+        "summary": "Provided first- and second-level support for Windows, Microsoft 365 and internal applications; handled TOPdesk tickets remotely and on site.",
         "points": [
-          "Handled TOPdesk tickets and calls from the call centre, resolving issues and escalating tickets when needed.",
-          "Troubleshot printer, hardware, software and basic network issues, with tasks involving Active Directory, DNS and DHCP.",
-          "Automated Active Directory onboarding and offboarding with my own PowerShell scripts.",
-          "Set up and managed more than 100 PCs and notebooks with SCCM, plus mobile devices with Workspace ONE."
+          "Set up and maintained workstations, thin clients and peripherals; deployed Windows and assigned software through existing SCCM processes.",
+          "Handled AD group memberships and mailbox permissions; processed account changes by manually running PowerShell scripts in coordination with the IAM team.",
+          "Diagnosed and resolved connectivity issues, including DNS and DHCP problems; added and removed devices in Aruba ClearPass.",
+          "Maintained inventory records in TOPdesk, independently placed hardware orders and coordinated with suppliers.",
+          "Created and maintained documentation and knowledge base articles; delivered monthly IT induction training for new employees."
         ]
       },
       {
         "company": "Huanga IT Solutions",
         "role": "Systems engineering internship",
         "dates": "Nov 2022 to Jun 2023",
-        "summary": "Administered Microsoft 365 and Azure Active Directory, and assisted with server administration.",
-        "points": []
+        "summary": "Manually prepared and configured Windows PCs and laptops for customers, including on-site setup and handover, and occasionally packaged and deployed software using WAPT.",
+        "points": [
+          "Supported customers by phone, email and on site with technical issues affecting devices and software.",
+          "Handled requests relating to user accounts, licences, groups and permissions in Microsoft 365 and Azure Active Directory, now Microsoft Entra ID."
+        ]
       }
     ],
     "personalProjectsContext": "Learning projects: Discord commands, role checks, async event handlers and logging; responsive web layouts and small JavaScript interactions."
@@ -290,9 +294,9 @@ const translations = {
       {
         "title": "Im Beruf",
         "items": [
-          "PowerShell / Active Directory",
-          "Microsoft 365 / Exchange",
-          "SCCM / Workspace ONE"
+          "Windows / PowerShell / Active Directory",
+          "Microsoft 365 / Microsoft Entra ID / SCCM",
+          "TOPdesk / WAPT / Aruba ClearPass"
         ],
         "id": "work"
       },
@@ -341,20 +345,24 @@ const translations = {
         "company": "Spital Zollikerberg",
         "role": "Lehre als ICT-Fachmann EFZ",
         "dates": "Aug. 2023 bis Aug. 2026",
-        "summary": "1st- und 2nd-Level-Support für Mitarbeitende auf den Stationen und in den Abteilungen des Spitals: vor Ort, remote und am Telefon.",
+        "summary": "1st und 2nd Level Support für Windows, Microsoft 365 und interne Anwendungen; Bearbeitung von Tickets in TOPdesk, remote und vor Ort.",
         "points": [
-          "Tickets in TOPdesk bearbeitet und Anrufe aus dem Callcenter entgegengenommen. Probleme gelöst oder Tickets bei Bedarf eskaliert.",
-          "Drucker-, Hardware- und Softwareprobleme sowie einfache Netzwerkstörungen behoben und Aufgaben rund um Active Directory, DNS und DHCP übernommen.",
-          "Onboarding und Offboarding in Active Directory mit eigenen PowerShell-Scripts automatisiert.",
-          "Über 100 PCs und Notebooks mit SCCM eingerichtet und verwaltet sowie Mobilgeräte mit Workspace ONE betreut."
+          "Aufbau und Wartung von Arbeitsplätzen, Thin Clients und Peripherie; Windows-Bereitstellung und Softwarezuweisung über bestehende SCCM-Prozesse.",
+          "Bearbeitung von AD-Gruppenmitgliedschaften und Postfachberechtigungen; Kontobearbeitung mit manuell ausgeführten PowerShell-Skripten in Abstimmung mit dem IAM-Team.",
+          "Analyse und Behebung von Verbindungsproblemen, einschliesslich DNS und DHCP; Erfassen und Entfernen von Geräten in Aruba ClearPass.",
+          "Inventarpflege in TOPdesk sowie selbstständige Hardwarebestellungen und Abstimmung mit Lieferanten.",
+          "Erstellung und Pflege von Dokumentationen und Know-how-Artikeln; Durchführung der monatlichen IT-Schulung für neue Mitarbeitende."
         ]
       },
       {
         "company": "Huanga IT Solutions",
         "role": "Praktikum im System Engineering",
         "dates": "Nov. 2022 bis Juni 2023",
-        "summary": "Microsoft 365 und Azure Active Directory verwaltet und bei der Administration von Servern mitgearbeitet.",
-        "points": []
+        "summary": "Manuelle Vorbereitung und Konfiguration von Windows-PCs und Laptops für Kunden sowie Einrichtung und Übergabe vor Ort; dabei auch gelegentliche Softwarepaketierung und -verteilung mit WAPT.",
+        "points": [
+          "Unterstützung von Kunden per Telefon, E-Mail und vor Ort bei technischen Problemen mit Geräten und Software.",
+          "Bearbeitung von Anfragen zu Benutzerkonten, Lizenzen, Gruppen und Berechtigungen in Microsoft 365 und Azure Active Directory, heute Microsoft Entra ID."
+        ]
       }
     ],
     "personalProjectsContext": "In eigenen Lernprojekten habe ich mich mit Discord Commands, Role Checks, Async Event Handlers und Logging beschäftigt. Ausserdem habe ich responsive Weblayouts und kleine Interaktionen mit JavaScript umgesetzt."
@@ -366,7 +374,7 @@ export function copy(language: Language = 'en') {
     ...translations[language],
     title: language === 'de' ? 'Robin Schmid · Linux, Systeme & Automation' : site.title,
     description: language === 'de' ? 'Robin Schmid, ICT-Fachmann EFZ. Mein Portfolio zu Infrastruktur, Linux, Cloud und Automatisierung mit Kursarbeiten zu Cloud-Lösungen und Docker.' : site.description,
-    introduction: language === 'de' ? 'Ich bin Robin Schmid, ICT-Fachmann EFZ. Ich habe im IT-Support gearbeitet und Abläufe mit PowerShell automatisiert. Jetzt möchte ich mich im System Engineering weiterentwickeln, besonders in den Bereichen Linux und Cloud-Infrastruktur.' : site.introduction,
+    introduction: language === 'de' ? 'Ich bin Robin Schmid, ICT-Fachmann EFZ. Ich habe im IT-Support gearbeitet, Windows-Arbeitsplätze eingerichtet und Kontoänderungen mit PowerShell-Skripten bearbeitet. Jetzt möchte ich mich im System Engineering weiterentwickeln, besonders in den Bereichen Linux und Cloud-Infrastruktur.' : site.introduction,
     currentFocus: language === 'de' ? site.currentFocusDe : site.currentFocus,
   };
 }
