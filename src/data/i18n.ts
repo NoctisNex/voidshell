@@ -69,16 +69,16 @@ const translations = {
     "learning": {
       "label": "Current learning",
       "title": "Learning by doing.",
-      "motivation": "I've been looking for my next role since around late July / early August. I miss the routine of working, solving problems and learning along the way. Without that, I felt like I was standing still. I wanted something that felt like work while I continued my job search.",
-      "approach": "That's how I came across KodeKloud and took out a subscription. I'm enjoying the course, especially the labs where I get to do the work myself. Breaking something, figuring out what went wrong and fixing it is how I like to learn. I've been practising daily.",
-      "courseLabel": "Course in progress",
-      "courseText": "I'm working through KodeKloud's RHCSA prep course. The practical labs let me try things out and understand how Linux systems work.",
+      "motivation": "I've been looking for a job since around late July or early August. I miss working and learning something new along the way. I felt like I wasn't developing my skills anymore, so I wanted to find something that gave me practical work to do while I kept looking for a job.",
+      "approach": "That's how I found KodeKloud and signed up for a subscription. I'm having a lot of fun with the course, especially the labs where I can try things myself. Breaking something and working out how to fix it helps me understand how it works. I've been practising every day.",
+      "courseLabel": "Current course",
+      "courseText": "I'm taking KodeKloud's RHCSA prep course, with labs where I practise Linux administration.",
       "progressLabel": "Course progress",
       "complete": "complete",
       "asOf": "As of",
-      "engineerLabel": "Simulated workplace practice",
-      "engineerText": "Alongside the course, I work through tasks and tickets on KodeKloud Engineer. It puts me in a fictional company with its own infrastructure and problems modelled on everyday IT work. That gives my practice some of the structure I've been missing.",
-      "engineerContext": "These are training labs in a simulated workplace, separate from my employment history."
+      "engineerLabel": "Practice tasks and tickets",
+      "engineerText": "I also work through tasks and tickets on KodeKloud Engineer. The platform has a fictional company with its own IT infrastructure, and the tasks are based on problems you might come across at work. Working through those tickets gives me some of the routine I've been missing.",
+      "engineerContext": "These tickets are part of my training."
     },
     "linux": {
       "link": "My Linux experience",
@@ -250,16 +250,16 @@ const translations = {
     "learning": {
       "label": "Was ich gerade lerne",
       "title": "Lernen durch Ausprobieren.",
-      "motivation": "Seit ungefähr Ende Juli / Anfang August suche ich eine neue Stelle. Mir fehlt der Arbeitsalltag: Probleme lösen, Aufgaben angehen und dabei dazulernen. Ohne das hatte ich das Gefühl, auf der Stelle zu treten. Ich wollte etwas machen, das sich nach Arbeit anfühlt, während ich weiter nach einer Stelle suche.",
-      "approach": "So bin ich auf KodeKloud gestossen und habe ein Abo abgeschlossen. Der Kurs macht mir viel Spass, besonders die Labs, in denen ich selbst Hand anlegen kann. Etwas kaputtmachen, die Ursache herausfinden und es wieder reparieren: So lerne ich gerne. Das mache ich inzwischen täglich.",
-      "courseLabel": "Kurs in Bearbeitung",
-      "courseText": "Ich arbeite den RHCSA-Vorbereitungskurs von KodeKloud durch. In den praktischen Labs kann ich selbst ausprobieren und nachvollziehen, wie Linux-Systeme funktionieren.",
+      "motivation": "Seit etwa Ende Juli oder Anfang August bin ich auf Stellensuche. Ich vermisse die Arbeit und das Gefühl, dabei etwas dazuzulernen. Ich hatte den Eindruck, mich fachlich kaum noch weiterzuentwickeln. Deshalb habe ich nach etwas gesucht, bei dem ich auch ohne Stelle wieder regelmässig an konkreten Aufgaben arbeiten kann.",
+      "approach": "So bin ich auf KodeKloud gestossen und habe ein Abo abgeschlossen. Der Kurs macht mir viel Spass, besonders die Labs, in denen ich alles selbst ausprobieren kann. Wenn ich dabei etwas kaputtmache und es selbst wieder repariere, verstehe ich besser, wie es funktioniert. Inzwischen übe ich jeden Tag.",
+      "courseLabel": "Aktueller Kurs",
+      "courseText": "Im RHCSA-Vorbereitungskurs von KodeKloud übe ich die Linux-Administration direkt in den Labs.",
       "progressLabel": "Kursfortschritt",
       "complete": "abgeschlossen",
       "asOf": "Stand",
-      "engineerLabel": "Übungen im simulierten Arbeitsalltag",
-      "engineerText": "Neben dem Kurs bearbeite ich Aufgaben und Tickets auf KodeKloud Engineer. Dort arbeite ich in einer fiktiven Firma mit eigener Infrastruktur an Problemen, wie sie im IT-Alltag vorkommen. Das gibt dem Üben etwas von der Struktur, die mir gerade fehlt.",
-      "engineerContext": "Das sind Trainingslabs in einer simulierten Arbeitsumgebung, getrennt von meiner Berufserfahrung."
+      "engineerLabel": "Aufgaben und Tickets zum Üben",
+      "engineerText": "Neben dem Kurs bearbeite ich Aufgaben und Tickets auf KodeKloud Engineer. Dort gibt es eine fiktive Firma mit eigener IT-Infrastruktur. Die Aufgaben orientieren sich an Problemen aus dem Arbeitsalltag. Die Tickets geben mir wieder etwas von der Routine, die mir im Moment fehlt.",
+      "engineerContext": "Die Tickets sind Teil meiner Weiterbildung."
     },
     "linux": {
       "link": "Meine Linux-Erfahrung",
