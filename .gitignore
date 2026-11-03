@@ -33,6 +33,7 @@ test-results/
 .vercel/
 .wrangler/
 AGENTS.md
+QA.md
 
 # Original brand package: retain locally; publish only the site's chosen assets
 /voidshell-brand-package.zip
