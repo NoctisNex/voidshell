@@ -1,5 +1,19 @@
 # Delivery checks
 
+## KodeKloud learning update — 3 November 2026
+
+- Added the personal learning story and RHCSA prep course to the About page in English and Swiss Standard German. KodeKloud Engineer is labelled as simulated workplace practice, outside the professional experience section.
+- Course progress is a manually maintained snapshot: 28% as of 3 November 2026. Update `progress` and `updatedAt` together in `src/data/linux.ts`.
+- Removed Red Hat System Administration I 9.3. Red Hat System Administration II 10.0 is planned after the KodeKloud prep course. The personal desktop text now records the switch from CachyOS to Omarchy.
+- Playwright used Chromium (HeadlessChrome 155). Captured full-page screenshots for the English and German homepage and About page at 390, 768 and 1440px in both light and dark themes: 24 combinations. Visually reviewed the changed learning, Linux and homepage teaser sections across that matrix.
+- Every final combination returned HTTP 200, with no horizontal overflow, broken images, console errors or uncaught browser errors. Wrapping and spacing were reviewed in both languages and themes.
+- Verified language switching, homepage/About navigation, work/experience/contact/Linux anchors and theme persistence after reload at all three widths in both languages. The native progress element reports 28 out of 100 with a translated label. Keyboard skip navigation moves focus to the main content.
+- The first development reload could not resolve the newly added Astro component. Restarting the development server cleared that import error; the final browser checks passed.
+- `npm run build` passed. No dependencies or client-side scripts were added. No push, merge or deployment was performed.
+- Screenshots are local review artifacts in `/tmp/voidshell-kodekloud-review/`. Firefox, Safari and physical devices were not tested.
+
+## Earlier delivery checks
+
 Verified on 19 September 2026.
 
 - Astro production build: successful. Five HTML pages plus sitemap and robots endpoints.
